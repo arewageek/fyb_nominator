@@ -1,16 +1,12 @@
 "use client";
-
-import { initializeApp } from "firebase/app";
 import { useEffect, useState } from "react";
-import { collection, query } from "firebase/firestore";
-import { useCollection } from "react-firebase-hooks/firestore"; //retrieves and monitors the collection from firestore, it also listens to update and stores the data for us in the value field
-import { updatePhoneNumber } from "firebase/auth";
+import { PaystackButton } from "react-paystack";
 
 interface Nomination {
   id: number;
   nominee: string;
   category: string;
-  amount: number;
+  quantity: number;
 }
 
 interface NomineeProfile {
@@ -26,32 +22,34 @@ interface NomineeProfile {
 
 export default function page() {
   // State management
-  const publicKey = "pk_live_4015eb9337f3fb5b66bc3880d2c9fd2ab500d3f9";
+  const publicKey = "pk_test_3b6e94ac5b62d8c69226a481d857d1cd089d9c67";
   const [nominee, setNominee] = useState<string>("");
-  const [email, setEmail] = useState<string>("get2abeloodo@gmail.com");
+  const [email, setEmail] = useState<string>("futminnanfcs75@gmail.com");
   const [category, setCategory] = useState<string>("");
   const [amount, setAmount] = useState<number>(0);
+  const [quantity, setQuantity] = useState<number>(1);
   const [total, setTotal] = useState<number>(0);
   const [nominations, setNominations] = useState<Nomination[]>([]);
   const [isAdding, setIsAdding] = useState<boolean>(false);
   const [viewingProfile, setViewingProfile] = useState<NomineeProfile | null>(
     null
   );
-
   //paystack
-  // const componentProps = {
-  //   email,
-  //   amount,
-  //   publicKey,
-  //   custom_fields: {
-  //     nominee,
-  //     total,
-  //   },
-  //   text: "makepayment",
-  //   onSuccess: () => alert("Success"),
-  //   onclose: () => alert("thanks for your nomination"),
-  // };
+  const componentProps = {
+    amount,
+    email,
+    publicKey,
+    text: "Make Payment",
+    onSuccess: () => {
+      alert("Thanks for doing business with us! Come back soon!!");
+      handlePaymentSuccess();
+    },
+    onClose: () => alert("Wait! You need this oil, don't go!!!!"),
+  };
 
+  const handlePaymentSuccess = () => {
+    console.log(nominee, category, nominations);
+  };
   // //firestore
   // const [votesSnapshot, votesLoading, votesError] = useCollection(
   //   collection(db, "votes"),
@@ -160,13 +158,13 @@ export default function page() {
           id: Date.now(),
           nominee: selectedNominee?.name || nominee,
           category,
-          amount,
+          quantity,
         };
         setNominations([...nominations, newNomination]);
         setNominee("");
         setCategory("");
-        setTotal((total) => total + newNomination.amount);
-        setAmount(1);
+        setAmount((amount) => (amount += +newNomination.quantity * 10000));
+        setQuantity(0);
         setIsAdding(false);
       }, 300);
     }
@@ -174,7 +172,7 @@ export default function page() {
 
   const handleRemoveNomination = (id: number, amo: number) => {
     setNominations(nominations.filter((nomination) => nomination.id !== id));
-    setTotal((total) => total - amo);
+    setAmount((amount) => amount - amo * 10000);
   };
 
   const handleViewProfile = (nomineeId: string) => {
@@ -186,22 +184,13 @@ export default function page() {
     setViewingProfile(null);
   };
 
-  const makePayment = () => {
-    console.log(`Making payment ${total * 100}`);
-    paymentSuccesful();
-  };
-
-  const paymentSuccesful = () => {
-    console.log(nominations);
-  };
-
   return (
-    <div className="min-h-screen flex flex-col justify-center items-center text-slate-400 bg-gradient-to-br from-slate-50 to-blue-50 py-12 px-4 sm:px-6 lg:px-8">
+    <div className="min-h-screen flex flex-col justify-center items-center text-slate-400 bg-gradient-to-br from-slate-50 to-blue-50 py-3 px-4 sm:px-6 lg:px-8">
       {/* Main Content */}
-      <img className="h-20 w-20" src="nfcs-logo.png" alt="nfcs logo" />
+      <img className="h-11 w-10" src="nfcs-logo.png" alt="nfcs logo" />
       <div className="max-w-3xl mx-auto">
         {/* Header */}
-        <div className="text-center mb-12">
+        <div className="text-center mb-7">
           <h1 className="text-4xl font-bold text-slate-800 mb-1">
             Nox Amoris Award
           </h1>
@@ -278,8 +267,8 @@ export default function page() {
               <input
                 type="number"
                 min="1"
-                value={amount}
-                onChange={(e) => setAmount(Number(e.target.value))}
+                value={quantity}
+                onChange={(e) => setQuantity(Number(e.target.value))}
                 className="w-full px-4 py-3 rounded-lg border border-slate-200 focus:ring-2 focus:ring-blue-500 focus:border-blue-500"
               />
             </div>
@@ -336,7 +325,9 @@ export default function page() {
                       {nom.nominee}
                     </h4>
                     <p className="text-sm text-slate-600">{nom.category}</p>
-                    <p className="text-sm text-blue-600">N{nom.amount * 100}</p>
+                    <p className="text-sm text-blue-600">
+                      N{nom.quantity * 100}
+                    </p>
                   </div>
                   <div className="flex gap-2">
                     <button
@@ -371,7 +362,9 @@ export default function page() {
                       </svg>
                     </button>
                     <button
-                      onClick={() => handleRemoveNomination(nom.id, nom.amount)}
+                      onClick={() =>
+                        handleRemoveNomination(nom.id, nom.quantity)
+                      }
                       className="text-red-500 hover:text-red-700 p-2"
                       title="Remove nomination"
                     >
@@ -394,12 +387,12 @@ export default function page() {
                 </div>
               ))}
               <div className="flex justify-center items-center text-xl text-black">
-                <p>Total: N{total * 100}</p>
+                <p>Total: N{amount / 100}</p>
               </div>
 
               {/* make payment*/}
-              <button
-                // {...componentProps}
+              <PaystackButton
+                {...componentProps}
                 className={`w-full py-3 px-4 rounded-md text-white font-medium transition-all ${
                   nominations === null
                     ? "bg-gray-400 cursor-not-allowed"
@@ -407,9 +400,7 @@ export default function page() {
                     ? "bg-blue-400"
                     : "bg-blue-600 hover:bg-blue-700"
                 }`}
-              >
-                Make payment
-              </button>
+              />
             </div>
           )}
         </div>
