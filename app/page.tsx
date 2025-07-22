@@ -1593,11 +1593,10 @@ export default function page() {
                   <button
                     onClick={() => nominee && handleViewProfile(nominee)}
                     disabled={!nominee}
-                    className={`px-4 py-3 rounded-lg transition-colors ${
-                      !nominee
-                        ? "bg-gray-200 text-gray-400 cursor-not-allowed"
-                        : "bg-blue-100 text-blue-600 hover:bg-blue-200"
-                    }`}
+                    className={`px-4 py-3 rounded-lg transition-colors ${!nominee
+                      ? "bg-gray-200 text-gray-400 cursor-not-allowed"
+                      : "bg-blue-100 text-blue-600 hover:bg-blue-200"
+                      }`}
                   >
                     About
                   </button>
@@ -1642,13 +1641,12 @@ export default function page() {
             <button
               onClick={handleAddNomination}
               disabled={!nominee || !category || isAdding}
-              className={`w-full py-3 px-4 rounded-md text-white font-medium transition-all ${
-                !nominee || !category
-                  ? "bg-gray-400 cursor-not-allowed"
-                  : isAdding
+              className={`w-full py-3 px-4 rounded-md text-white font-medium transition-all ${!nominee || !category
+                ? "bg-gray-400 cursor-not-allowed"
+                : isAdding
                   ? "bg-blue-400"
                   : "bg-blue-600 hover:bg-blue-700"
-              }`}
+                }`}
             >
               {isAdding ? "Adding..." : "Nominate"}
             </button>
@@ -1758,13 +1756,12 @@ export default function page() {
               {/* make payment*/}
               <PaystackButton
                 {...componentProps}
-                className={`w-full py-3 px-4 rounded-md text-white font-medium transition-all ${
-                  nominations === null
-                    ? "bg-gray-400 cursor-not-allowed"
-                    : isAdding
+                className={`w-full py-3 px-4 rounded-md text-white font-medium transition-all ${nominations === null
+                  ? "bg-gray-400 cursor-not-allowed"
+                  : isAdding
                     ? "bg-blue-400"
                     : "bg-blue-600 hover:bg-blue-700"
-                }`}
+                  }`}
               />
             </div>
           )}

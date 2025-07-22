@@ -23,11 +23,11 @@ datasource db {
 //   nominations Nomination[]
 // }
 
-model addNomination {
+model Nomination {
   id       Int    @id @default(autoincrement())
   nominee  String
   category String
-  quantity String
+  quantity Int
 }
 
 // model Nomination {

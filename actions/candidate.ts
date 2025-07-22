@@ -1,6 +1,5 @@
 "use server";
-import { prisma } from "@/lib/prisma";
-import { error } from "console";
+import prisma from "@/lib/prisma";
 
 // export const prisma = new PrismaClient();
 
@@ -18,36 +17,36 @@ export interface Response {
   data?: any;
 }
 
-export const addCandidate = async ({
-  fullname,
-  category,
-  bio,
-  society,
-}: Candidate) => {
-  try {
-    await prisma.candidate.create({
-      data: {
-        fullname,
-        category,
-        bio,
-        society,
-      },
-    });
-  } catch (e: any) {
-    error;
-  }
+// export const addCandidate = async ({
+//   fullname,
+//   category,
+//   bio,
+//   society,
+// }: Candidate) => {
+//   try {
+//     await prisma.candidate.create({
+//       data: {
+//         fullname,
+//         category,
+//         bio,
+//         society,
+//       },
+//     });
+//   } catch (e: any) {
+//     console.log(e.message);
+//   }
 
-  const allUser = await prisma.candidate.findMany();
-  console.log("candidates", allUser);
-};
+//   const allUser = await prisma.candidate.findMany();
+//   console.log("candidates", allUser);
+// };
 
 export const addNomination = async (
   nominee: string,
-  quantity: number,
+  quantity: string,
   category: string
 ) => {
   try {
-    await prisma.Nomination.create({
+    await prisma.nomination.create({
       data: {
         nominee,
         quantity,
@@ -55,7 +54,7 @@ export const addNomination = async (
       },
     });
     console.log("added");
-  } catch {
-    alert("unable to add nomination");
+  } catch (e: any) {
+    console.log(e.message);
   }
 };
