@@ -1,6 +1,7 @@
 "use client";
 import { useEffect, useState } from "react";
 import dynamic from "next/dynamic";
+import { addNomination } from "@/actions/candidate";
 // import { PaystackButton } from "react-paystack";
 
 const PaystackButton = dynamic(
@@ -62,14 +63,17 @@ export default function page() {
     publicKey,
     text: "Make Payment",
     onSuccess: () => {
-      alert("Thanks for doing business with us! Come back soon!!");
       handlePaymentSuccess();
     },
     onClose: () => alert("Wait! You need this oil, don't go!!!!"),
   };
 
   const handlePaymentSuccess = () => {
-    console.log(nominee, category, nominations);
+    nominations.map((nom) => {
+      // console.log(nom.nominee);
+      // const
+      addNomination(nom.nominee, nom.quantity, nom.category);
+    });
   };
   // //firestore
   // const [votesSnapshot, votesLoading, votesError] = useCollection(
@@ -1481,7 +1485,6 @@ export default function page() {
     "Most social",
     "Entrepreneur of the year (gk)",
     "Entrepreneur of the year (bosso)",
-    "Most supporting brand (uncontested)",
     "Best dressed male (gk)",
     "Best dressed male (bosso)",
     "Best dressed female (gk)",
@@ -1499,7 +1502,6 @@ export default function page() {
     "Mr. Culture (bosso)",
     "Miss culture (gk)",
     "Miss. Culture (bosso)",
-    "Academia of the year (uncontested)",
     "Most political",
     "Sports personality of the year (gk)",
     "Sports personality of the year (bosso)",
@@ -1508,10 +1510,7 @@ export default function page() {
     "Miss. Ebony (gk)",
     "Miss. Ebony (bosso)",
     "Music personality of the year",
-    "Humanitarian award (uncontested)",
     "Couple of the year",
-    "Icon of exquisite family (uncontested)",
-    "Mr. And miss. Exquisite (uncontested)",
   ];
 
   // Handler functions
@@ -1866,7 +1865,7 @@ export default function page() {
                       NFCS Society
                     </p>
                     <h4 className="text-slate-700 font-medium">
-                      {viewingProfile.nfcsSociety}
+                      {viewingProfile.nfcsSociety}.
                     </h4>
                   </div>
                 </div>
@@ -1875,7 +1874,7 @@ export default function page() {
           </div>
         </div>
       )}
-      <div className="mt-10">{/* <h1>fetched data</h1> */}</div>
+      <div className="mt-10">by UltimateTech @08121315694</div>
     </div>
   );
 }

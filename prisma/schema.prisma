@@ -14,26 +14,37 @@ datasource db {
   url      = "file:./dev.db"
 }
 
-model Candidate {
-  id          Int          @id @default(autoincrement())
-  name        String
-  nominations Nomination[]
-}
+// model Candidate {
+//   id          Int          @id @default(autoincrement())
+//   fullname        String?
+//   category        String?
+//   bio             String?
+//   nfcsSociety     String?
+//   nominations Nomination[]
+// }
 
 model Nomination {
-  id Int @id @default(autoincrement())
-
-  candidate Candidate @relation(fields: [candidateId], references: [id])
-  category  Category  @relation(fields: [categoryId], references: [id])
-
-  candidateId Int
-  categoryId  Int
+  id                Int @id @default(autoincrement())
+  nominee           String
+  category          String
+  quantity          String
 }
 
-model Category {
-  id              Int    @id @default(autoincrement())
-  name            String @unique
-  candidatesCount Int
+// model Nomination {
+//   id Int @id @default(autoincrement())
 
-  nomination Nomination[]
-}
+//   candidate Candidate @relation(fields: [candidateId], references: [id])
+//   category  Category  @relation(fields: [categoryId], references: [id])
+
+//   candidateId Int
+//   categoryId  Int
+// }
+
+// model Category {
+//   id              Int    @id @default(autoincrement())
+//   name            String @unique
+//   candidatesCount Int
+
+//   nomination Nomination[]
+// }
+
