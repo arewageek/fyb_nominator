@@ -2,6 +2,7 @@
 import { useEffect, useState } from "react";
 import dynamic from "next/dynamic";
 import { addNomination } from "@/actions/candidate";
+import { useRouter } from "next/navigation";
 // import { PaystackButton } from "react-paystack";
 
 const PaystackButton = dynamic(
@@ -57,6 +58,7 @@ export default function page() {
     null
   );
   //paystack
+  const router = useRouter();
   const componentProps = {
     amount,
     email,
@@ -72,9 +74,11 @@ export default function page() {
     nominations.map((nom) => {
       // console.log(nom.nominee);
       // const
-      addNomination(nom.nominee, nom.quantity, nom.category);
+      addNomination(nom.nominee, nom.category, nom.quantity.toString());
     });
+    setNominations([]);
   };
+
   // //firestore
   // const [votesSnapshot, votesLoading, votesError] = useCollection(
   //   collection(db, "votes"),
@@ -1529,7 +1533,7 @@ export default function page() {
         setNominee("");
         setCategory("");
         setAmount((amount) => (amount += +newNomination.quantity * 10000));
-        setQuantity(0);
+        setQuantity(1);
         setIsAdding(false);
       }, 300);
     }
@@ -1874,7 +1878,7 @@ export default function page() {
           </div>
         </div>
       )}
-      <div className="mt-10">by UltimateTech @08121315694</div>
+      <div className="mt-10">by 08121315694</div>
     </div>
   );
 }

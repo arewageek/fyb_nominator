@@ -14,10 +14,10 @@ export type PrismaPromise<T> = $Public.PrismaPromise<T>
 
 
 /**
- * Model addNomination
+ * Model Nomination
  * 
  */
-export type addNomination = $Result.DefaultSelection<Prisma.$addNominationPayload>
+export type Nomination = $Result.DefaultSelection<Prisma.$NominationPayload>
 
 /**
  * ##  Prisma Client ʲˢ
@@ -26,8 +26,8 @@ export type addNomination = $Result.DefaultSelection<Prisma.$addNominationPayloa
  * @example
  * ```
  * const prisma = new PrismaClient()
- * // Fetch zero or more AddNominations
- * const addNominations = await prisma.addNomination.findMany()
+ * // Fetch zero or more Nominations
+ * const nominations = await prisma.nomination.findMany()
  * ```
  *
  *
@@ -47,8 +47,8 @@ export class PrismaClient<
    * @example
    * ```
    * const prisma = new PrismaClient()
-   * // Fetch zero or more AddNominations
-   * const addNominations = await prisma.addNomination.findMany()
+   * // Fetch zero or more Nominations
+   * const nominations = await prisma.nomination.findMany()
    * ```
    *
    *
@@ -145,14 +145,14 @@ export class PrismaClient<
   }>>
 
       /**
-   * `prisma.addNomination`: Exposes CRUD operations for the **addNomination** model.
+   * `prisma.nomination`: Exposes CRUD operations for the **Nomination** model.
     * Example usage:
     * ```ts
-    * // Fetch zero or more AddNominations
-    * const addNominations = await prisma.addNomination.findMany()
+    * // Fetch zero or more Nominations
+    * const nominations = await prisma.nomination.findMany()
     * ```
     */
-  get addNomination(): Prisma.addNominationDelegate<ExtArgs, ClientOptions>;
+  get nomination(): Prisma.NominationDelegate<ExtArgs, ClientOptions>;
 }
 
 export namespace Prisma {
@@ -593,7 +593,7 @@ export namespace Prisma {
 
 
   export const ModelName: {
-    addNomination: 'addNomination'
+    Nomination: 'Nomination'
   };
 
   export type ModelName = (typeof ModelName)[keyof typeof ModelName]
@@ -612,81 +612,81 @@ export namespace Prisma {
       omit: GlobalOmitOptions
     }
     meta: {
-      modelProps: "addNomination"
+      modelProps: "nomination"
       txIsolationLevel: Prisma.TransactionIsolationLevel
     }
     model: {
-      addNomination: {
-        payload: Prisma.$addNominationPayload<ExtArgs>
-        fields: Prisma.addNominationFieldRefs
+      Nomination: {
+        payload: Prisma.$NominationPayload<ExtArgs>
+        fields: Prisma.NominationFieldRefs
         operations: {
           findUnique: {
-            args: Prisma.addNominationFindUniqueArgs<ExtArgs>
-            result: $Utils.PayloadToResult<Prisma.$addNominationPayload> | null
+            args: Prisma.NominationFindUniqueArgs<ExtArgs>
+            result: $Utils.PayloadToResult<Prisma.$NominationPayload> | null
           }
           findUniqueOrThrow: {
-            args: Prisma.addNominationFindUniqueOrThrowArgs<ExtArgs>
-            result: $Utils.PayloadToResult<Prisma.$addNominationPayload>
+            args: Prisma.NominationFindUniqueOrThrowArgs<ExtArgs>
+            result: $Utils.PayloadToResult<Prisma.$NominationPayload>
           }
           findFirst: {
-            args: Prisma.addNominationFindFirstArgs<ExtArgs>
-            result: $Utils.PayloadToResult<Prisma.$addNominationPayload> | null
+            args: Prisma.NominationFindFirstArgs<ExtArgs>
+            result: $Utils.PayloadToResult<Prisma.$NominationPayload> | null
           }
           findFirstOrThrow: {
-            args: Prisma.addNominationFindFirstOrThrowArgs<ExtArgs>
-            result: $Utils.PayloadToResult<Prisma.$addNominationPayload>
+            args: Prisma.NominationFindFirstOrThrowArgs<ExtArgs>
+            result: $Utils.PayloadToResult<Prisma.$NominationPayload>
           }
           findMany: {
-            args: Prisma.addNominationFindManyArgs<ExtArgs>
-            result: $Utils.PayloadToResult<Prisma.$addNominationPayload>[]
+            args: Prisma.NominationFindManyArgs<ExtArgs>
+            result: $Utils.PayloadToResult<Prisma.$NominationPayload>[]
           }
           create: {
-            args: Prisma.addNominationCreateArgs<ExtArgs>
-            result: $Utils.PayloadToResult<Prisma.$addNominationPayload>
+            args: Prisma.NominationCreateArgs<ExtArgs>
+            result: $Utils.PayloadToResult<Prisma.$NominationPayload>
           }
           createMany: {
-            args: Prisma.addNominationCreateManyArgs<ExtArgs>
+            args: Prisma.NominationCreateManyArgs<ExtArgs>
             result: BatchPayload
           }
           createManyAndReturn: {
-            args: Prisma.addNominationCreateManyAndReturnArgs<ExtArgs>
-            result: $Utils.PayloadToResult<Prisma.$addNominationPayload>[]
+            args: Prisma.NominationCreateManyAndReturnArgs<ExtArgs>
+            result: $Utils.PayloadToResult<Prisma.$NominationPayload>[]
           }
           delete: {
-            args: Prisma.addNominationDeleteArgs<ExtArgs>
-            result: $Utils.PayloadToResult<Prisma.$addNominationPayload>
+            args: Prisma.NominationDeleteArgs<ExtArgs>
+            result: $Utils.PayloadToResult<Prisma.$NominationPayload>
           }
           update: {
-            args: Prisma.addNominationUpdateArgs<ExtArgs>
-            result: $Utils.PayloadToResult<Prisma.$addNominationPayload>
+            args: Prisma.NominationUpdateArgs<ExtArgs>
+            result: $Utils.PayloadToResult<Prisma.$NominationPayload>
           }
           deleteMany: {
-            args: Prisma.addNominationDeleteManyArgs<ExtArgs>
+            args: Prisma.NominationDeleteManyArgs<ExtArgs>
             result: BatchPayload
           }
           updateMany: {
-            args: Prisma.addNominationUpdateManyArgs<ExtArgs>
+            args: Prisma.NominationUpdateManyArgs<ExtArgs>
             result: BatchPayload
           }
           updateManyAndReturn: {
-            args: Prisma.addNominationUpdateManyAndReturnArgs<ExtArgs>
-            result: $Utils.PayloadToResult<Prisma.$addNominationPayload>[]
+            args: Prisma.NominationUpdateManyAndReturnArgs<ExtArgs>
+            result: $Utils.PayloadToResult<Prisma.$NominationPayload>[]
           }
           upsert: {
-            args: Prisma.addNominationUpsertArgs<ExtArgs>
-            result: $Utils.PayloadToResult<Prisma.$addNominationPayload>
+            args: Prisma.NominationUpsertArgs<ExtArgs>
+            result: $Utils.PayloadToResult<Prisma.$NominationPayload>
           }
           aggregate: {
-            args: Prisma.AddNominationAggregateArgs<ExtArgs>
-            result: $Utils.Optional<AggregateAddNomination>
+            args: Prisma.NominationAggregateArgs<ExtArgs>
+            result: $Utils.Optional<AggregateNomination>
           }
           groupBy: {
-            args: Prisma.addNominationGroupByArgs<ExtArgs>
-            result: $Utils.Optional<AddNominationGroupByOutputType>[]
+            args: Prisma.NominationGroupByArgs<ExtArgs>
+            result: $Utils.Optional<NominationGroupByOutputType>[]
           }
           count: {
-            args: Prisma.addNominationCountArgs<ExtArgs>
-            result: $Utils.Optional<AddNominationCountAggregateOutputType> | number
+            args: Prisma.NominationCountArgs<ExtArgs>
+            result: $Utils.Optional<NominationCountAggregateOutputType> | number
           }
         }
       }
@@ -774,7 +774,7 @@ export namespace Prisma {
     omit?: Prisma.GlobalOmitConfig
   }
   export type GlobalOmitConfig = {
-    addNomination?: addNominationOmit
+    nomination?: NominationOmit
   }
 
   /* Types for Logging */
@@ -870,41 +870,44 @@ export namespace Prisma {
    */
 
   /**
-   * Model addNomination
+   * Model Nomination
    */
 
-  export type AggregateAddNomination = {
-    _count: AddNominationCountAggregateOutputType | null
-    _avg: AddNominationAvgAggregateOutputType | null
-    _sum: AddNominationSumAggregateOutputType | null
-    _min: AddNominationMinAggregateOutputType | null
-    _max: AddNominationMaxAggregateOutputType | null
+  export type AggregateNomination = {
+    _count: NominationCountAggregateOutputType | null
+    _avg: NominationAvgAggregateOutputType | null
+    _sum: NominationSumAggregateOutputType | null
+    _min: NominationMinAggregateOutputType | null
+    _max: NominationMaxAggregateOutputType | null
   }
 
-  export type AddNominationAvgAggregateOutputType = {
+  export type NominationAvgAggregateOutputType = {
     id: number | null
   }
 
-  export type AddNominationSumAggregateOutputType = {
+  export type NominationSumAggregateOutputType = {
     id: number | null
   }
 
-  export type AddNominationMinAggregateOutputType = {
+  export type NominationMinAggregateOutputType = {
     id: number | null
+    createdAt: Date | null
     nominee: string | null
     category: string | null
     quantity: string | null
   }
 
-  export type AddNominationMaxAggregateOutputType = {
+  export type NominationMaxAggregateOutputType = {
     id: number | null
+    createdAt: Date | null
     nominee: string | null
     category: string | null
     quantity: string | null
   }
 
-  export type AddNominationCountAggregateOutputType = {
+  export type NominationCountAggregateOutputType = {
     id: number
+    createdAt: number
     nominee: number
     category: number
     quantity: number
@@ -912,316 +915,325 @@ export namespace Prisma {
   }
 
 
-  export type AddNominationAvgAggregateInputType = {
+  export type NominationAvgAggregateInputType = {
     id?: true
   }
 
-  export type AddNominationSumAggregateInputType = {
+  export type NominationSumAggregateInputType = {
     id?: true
   }
 
-  export type AddNominationMinAggregateInputType = {
+  export type NominationMinAggregateInputType = {
     id?: true
+    createdAt?: true
     nominee?: true
     category?: true
     quantity?: true
   }
 
-  export type AddNominationMaxAggregateInputType = {
+  export type NominationMaxAggregateInputType = {
     id?: true
+    createdAt?: true
     nominee?: true
     category?: true
     quantity?: true
   }
 
-  export type AddNominationCountAggregateInputType = {
+  export type NominationCountAggregateInputType = {
     id?: true
+    createdAt?: true
     nominee?: true
     category?: true
     quantity?: true
     _all?: true
   }
 
-  export type AddNominationAggregateArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
+  export type NominationAggregateArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
     /**
-     * Filter which addNomination to aggregate.
+     * Filter which Nomination to aggregate.
      */
-    where?: addNominationWhereInput
+    where?: NominationWhereInput
     /**
      * {@link https://www.prisma.io/docs/concepts/components/prisma-client/sorting Sorting Docs}
      * 
-     * Determine the order of addNominations to fetch.
+     * Determine the order of Nominations to fetch.
      */
-    orderBy?: addNominationOrderByWithRelationInput | addNominationOrderByWithRelationInput[]
+    orderBy?: NominationOrderByWithRelationInput | NominationOrderByWithRelationInput[]
     /**
      * {@link https://www.prisma.io/docs/concepts/components/prisma-client/pagination#cursor-based-pagination Cursor Docs}
      * 
      * Sets the start position
      */
-    cursor?: addNominationWhereUniqueInput
+    cursor?: NominationWhereUniqueInput
     /**
      * {@link https://www.prisma.io/docs/concepts/components/prisma-client/pagination Pagination Docs}
      * 
-     * Take `±n` addNominations from the position of the cursor.
+     * Take `±n` Nominations from the position of the cursor.
      */
     take?: number
     /**
      * {@link https://www.prisma.io/docs/concepts/components/prisma-client/pagination Pagination Docs}
      * 
-     * Skip the first `n` addNominations.
+     * Skip the first `n` Nominations.
      */
     skip?: number
     /**
      * {@link https://www.prisma.io/docs/concepts/components/prisma-client/aggregations Aggregation Docs}
      * 
-     * Count returned addNominations
+     * Count returned Nominations
     **/
-    _count?: true | AddNominationCountAggregateInputType
+    _count?: true | NominationCountAggregateInputType
     /**
      * {@link https://www.prisma.io/docs/concepts/components/prisma-client/aggregations Aggregation Docs}
      * 
      * Select which fields to average
     **/
-    _avg?: AddNominationAvgAggregateInputType
+    _avg?: NominationAvgAggregateInputType
     /**
      * {@link https://www.prisma.io/docs/concepts/components/prisma-client/aggregations Aggregation Docs}
      * 
      * Select which fields to sum
     **/
-    _sum?: AddNominationSumAggregateInputType
+    _sum?: NominationSumAggregateInputType
     /**
      * {@link https://www.prisma.io/docs/concepts/components/prisma-client/aggregations Aggregation Docs}
      * 
      * Select which fields to find the minimum value
     **/
-    _min?: AddNominationMinAggregateInputType
+    _min?: NominationMinAggregateInputType
     /**
      * {@link https://www.prisma.io/docs/concepts/components/prisma-client/aggregations Aggregation Docs}
      * 
      * Select which fields to find the maximum value
     **/
-    _max?: AddNominationMaxAggregateInputType
+    _max?: NominationMaxAggregateInputType
   }
 
-  export type GetAddNominationAggregateType<T extends AddNominationAggregateArgs> = {
-        [P in keyof T & keyof AggregateAddNomination]: P extends '_count' | 'count'
+  export type GetNominationAggregateType<T extends NominationAggregateArgs> = {
+        [P in keyof T & keyof AggregateNomination]: P extends '_count' | 'count'
       ? T[P] extends true
         ? number
-        : GetScalarType<T[P], AggregateAddNomination[P]>
-      : GetScalarType<T[P], AggregateAddNomination[P]>
+        : GetScalarType<T[P], AggregateNomination[P]>
+      : GetScalarType<T[P], AggregateNomination[P]>
   }
 
 
 
 
-  export type addNominationGroupByArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
-    where?: addNominationWhereInput
-    orderBy?: addNominationOrderByWithAggregationInput | addNominationOrderByWithAggregationInput[]
-    by: AddNominationScalarFieldEnum[] | AddNominationScalarFieldEnum
-    having?: addNominationScalarWhereWithAggregatesInput
+  export type NominationGroupByArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
+    where?: NominationWhereInput
+    orderBy?: NominationOrderByWithAggregationInput | NominationOrderByWithAggregationInput[]
+    by: NominationScalarFieldEnum[] | NominationScalarFieldEnum
+    having?: NominationScalarWhereWithAggregatesInput
     take?: number
     skip?: number
-    _count?: AddNominationCountAggregateInputType | true
-    _avg?: AddNominationAvgAggregateInputType
-    _sum?: AddNominationSumAggregateInputType
-    _min?: AddNominationMinAggregateInputType
-    _max?: AddNominationMaxAggregateInputType
+    _count?: NominationCountAggregateInputType | true
+    _avg?: NominationAvgAggregateInputType
+    _sum?: NominationSumAggregateInputType
+    _min?: NominationMinAggregateInputType
+    _max?: NominationMaxAggregateInputType
   }
 
-  export type AddNominationGroupByOutputType = {
+  export type NominationGroupByOutputType = {
     id: number
+    createdAt: Date
     nominee: string
     category: string
     quantity: string
-    _count: AddNominationCountAggregateOutputType | null
-    _avg: AddNominationAvgAggregateOutputType | null
-    _sum: AddNominationSumAggregateOutputType | null
-    _min: AddNominationMinAggregateOutputType | null
-    _max: AddNominationMaxAggregateOutputType | null
+    _count: NominationCountAggregateOutputType | null
+    _avg: NominationAvgAggregateOutputType | null
+    _sum: NominationSumAggregateOutputType | null
+    _min: NominationMinAggregateOutputType | null
+    _max: NominationMaxAggregateOutputType | null
   }
 
-  type GetAddNominationGroupByPayload<T extends addNominationGroupByArgs> = Prisma.PrismaPromise<
+  type GetNominationGroupByPayload<T extends NominationGroupByArgs> = Prisma.PrismaPromise<
     Array<
-      PickEnumerable<AddNominationGroupByOutputType, T['by']> &
+      PickEnumerable<NominationGroupByOutputType, T['by']> &
         {
-          [P in ((keyof T) & (keyof AddNominationGroupByOutputType))]: P extends '_count'
+          [P in ((keyof T) & (keyof NominationGroupByOutputType))]: P extends '_count'
             ? T[P] extends boolean
               ? number
-              : GetScalarType<T[P], AddNominationGroupByOutputType[P]>
-            : GetScalarType<T[P], AddNominationGroupByOutputType[P]>
+              : GetScalarType<T[P], NominationGroupByOutputType[P]>
+            : GetScalarType<T[P], NominationGroupByOutputType[P]>
         }
       >
     >
 
 
-  export type addNominationSelect<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = $Extensions.GetSelect<{
+  export type NominationSelect<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = $Extensions.GetSelect<{
     id?: boolean
+    createdAt?: boolean
     nominee?: boolean
     category?: boolean
     quantity?: boolean
-  }, ExtArgs["result"]["addNomination"]>
+  }, ExtArgs["result"]["nomination"]>
 
-  export type addNominationSelectCreateManyAndReturn<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = $Extensions.GetSelect<{
+  export type NominationSelectCreateManyAndReturn<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = $Extensions.GetSelect<{
     id?: boolean
+    createdAt?: boolean
     nominee?: boolean
     category?: boolean
     quantity?: boolean
-  }, ExtArgs["result"]["addNomination"]>
+  }, ExtArgs["result"]["nomination"]>
 
-  export type addNominationSelectUpdateManyAndReturn<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = $Extensions.GetSelect<{
+  export type NominationSelectUpdateManyAndReturn<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = $Extensions.GetSelect<{
     id?: boolean
+    createdAt?: boolean
     nominee?: boolean
     category?: boolean
     quantity?: boolean
-  }, ExtArgs["result"]["addNomination"]>
+  }, ExtArgs["result"]["nomination"]>
 
-  export type addNominationSelectScalar = {
+  export type NominationSelectScalar = {
     id?: boolean
+    createdAt?: boolean
     nominee?: boolean
     category?: boolean
     quantity?: boolean
   }
 
-  export type addNominationOmit<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = $Extensions.GetOmit<"id" | "nominee" | "category" | "quantity", ExtArgs["result"]["addNomination"]>
+  export type NominationOmit<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = $Extensions.GetOmit<"id" | "createdAt" | "nominee" | "category" | "quantity", ExtArgs["result"]["nomination"]>
 
-  export type $addNominationPayload<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
-    name: "addNomination"
+  export type $NominationPayload<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
+    name: "Nomination"
     objects: {}
     scalars: $Extensions.GetPayloadResult<{
       id: number
+      createdAt: Date
       nominee: string
       category: string
       quantity: string
-    }, ExtArgs["result"]["addNomination"]>
+    }, ExtArgs["result"]["nomination"]>
     composites: {}
   }
 
-  type addNominationGetPayload<S extends boolean | null | undefined | addNominationDefaultArgs> = $Result.GetResult<Prisma.$addNominationPayload, S>
+  type NominationGetPayload<S extends boolean | null | undefined | NominationDefaultArgs> = $Result.GetResult<Prisma.$NominationPayload, S>
 
-  type addNominationCountArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> =
-    Omit<addNominationFindManyArgs, 'select' | 'include' | 'distinct' | 'omit'> & {
-      select?: AddNominationCountAggregateInputType | true
+  type NominationCountArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> =
+    Omit<NominationFindManyArgs, 'select' | 'include' | 'distinct' | 'omit'> & {
+      select?: NominationCountAggregateInputType | true
     }
 
-  export interface addNominationDelegate<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs, GlobalOmitOptions = {}> {
-    [K: symbol]: { types: Prisma.TypeMap<ExtArgs>['model']['addNomination'], meta: { name: 'addNomination' } }
+  export interface NominationDelegate<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs, GlobalOmitOptions = {}> {
+    [K: symbol]: { types: Prisma.TypeMap<ExtArgs>['model']['Nomination'], meta: { name: 'Nomination' } }
     /**
-     * Find zero or one AddNomination that matches the filter.
-     * @param {addNominationFindUniqueArgs} args - Arguments to find a AddNomination
+     * Find zero or one Nomination that matches the filter.
+     * @param {NominationFindUniqueArgs} args - Arguments to find a Nomination
      * @example
-     * // Get one AddNomination
-     * const addNomination = await prisma.addNomination.findUnique({
+     * // Get one Nomination
+     * const nomination = await prisma.nomination.findUnique({
      *   where: {
      *     // ... provide filter here
      *   }
      * })
      */
-    findUnique<T extends addNominationFindUniqueArgs>(args: SelectSubset<T, addNominationFindUniqueArgs<ExtArgs>>): Prisma__addNominationClient<$Result.GetResult<Prisma.$addNominationPayload<ExtArgs>, T, "findUnique", GlobalOmitOptions> | null, null, ExtArgs, GlobalOmitOptions>
+    findUnique<T extends NominationFindUniqueArgs>(args: SelectSubset<T, NominationFindUniqueArgs<ExtArgs>>): Prisma__NominationClient<$Result.GetResult<Prisma.$NominationPayload<ExtArgs>, T, "findUnique", GlobalOmitOptions> | null, null, ExtArgs, GlobalOmitOptions>
 
     /**
-     * Find one AddNomination that matches the filter or throw an error with `error.code='P2025'`
+     * Find one Nomination that matches the filter or throw an error with `error.code='P2025'`
      * if no matches were found.
-     * @param {addNominationFindUniqueOrThrowArgs} args - Arguments to find a AddNomination
+     * @param {NominationFindUniqueOrThrowArgs} args - Arguments to find a Nomination
      * @example
-     * // Get one AddNomination
-     * const addNomination = await prisma.addNomination.findUniqueOrThrow({
+     * // Get one Nomination
+     * const nomination = await prisma.nomination.findUniqueOrThrow({
      *   where: {
      *     // ... provide filter here
      *   }
      * })
      */
-    findUniqueOrThrow<T extends addNominationFindUniqueOrThrowArgs>(args: SelectSubset<T, addNominationFindUniqueOrThrowArgs<ExtArgs>>): Prisma__addNominationClient<$Result.GetResult<Prisma.$addNominationPayload<ExtArgs>, T, "findUniqueOrThrow", GlobalOmitOptions>, never, ExtArgs, GlobalOmitOptions>
+    findUniqueOrThrow<T extends NominationFindUniqueOrThrowArgs>(args: SelectSubset<T, NominationFindUniqueOrThrowArgs<ExtArgs>>): Prisma__NominationClient<$Result.GetResult<Prisma.$NominationPayload<ExtArgs>, T, "findUniqueOrThrow", GlobalOmitOptions>, never, ExtArgs, GlobalOmitOptions>
 
     /**
-     * Find the first AddNomination that matches the filter.
+     * Find the first Nomination that matches the filter.
      * Note, that providing `undefined` is treated as the value not being there.
      * Read more here: https://pris.ly/d/null-undefined
-     * @param {addNominationFindFirstArgs} args - Arguments to find a AddNomination
+     * @param {NominationFindFirstArgs} args - Arguments to find a Nomination
      * @example
-     * // Get one AddNomination
-     * const addNomination = await prisma.addNomination.findFirst({
+     * // Get one Nomination
+     * const nomination = await prisma.nomination.findFirst({
      *   where: {
      *     // ... provide filter here
      *   }
      * })
      */
-    findFirst<T extends addNominationFindFirstArgs>(args?: SelectSubset<T, addNominationFindFirstArgs<ExtArgs>>): Prisma__addNominationClient<$Result.GetResult<Prisma.$addNominationPayload<ExtArgs>, T, "findFirst", GlobalOmitOptions> | null, null, ExtArgs, GlobalOmitOptions>
+    findFirst<T extends NominationFindFirstArgs>(args?: SelectSubset<T, NominationFindFirstArgs<ExtArgs>>): Prisma__NominationClient<$Result.GetResult<Prisma.$NominationPayload<ExtArgs>, T, "findFirst", GlobalOmitOptions> | null, null, ExtArgs, GlobalOmitOptions>
 
     /**
-     * Find the first AddNomination that matches the filter or
+     * Find the first Nomination that matches the filter or
      * throw `PrismaKnownClientError` with `P2025` code if no matches were found.
      * Note, that providing `undefined` is treated as the value not being there.
      * Read more here: https://pris.ly/d/null-undefined
-     * @param {addNominationFindFirstOrThrowArgs} args - Arguments to find a AddNomination
+     * @param {NominationFindFirstOrThrowArgs} args - Arguments to find a Nomination
      * @example
-     * // Get one AddNomination
-     * const addNomination = await prisma.addNomination.findFirstOrThrow({
+     * // Get one Nomination
+     * const nomination = await prisma.nomination.findFirstOrThrow({
      *   where: {
      *     // ... provide filter here
      *   }
      * })
      */
-    findFirstOrThrow<T extends addNominationFindFirstOrThrowArgs>(args?: SelectSubset<T, addNominationFindFirstOrThrowArgs<ExtArgs>>): Prisma__addNominationClient<$Result.GetResult<Prisma.$addNominationPayload<ExtArgs>, T, "findFirstOrThrow", GlobalOmitOptions>, never, ExtArgs, GlobalOmitOptions>
+    findFirstOrThrow<T extends NominationFindFirstOrThrowArgs>(args?: SelectSubset<T, NominationFindFirstOrThrowArgs<ExtArgs>>): Prisma__NominationClient<$Result.GetResult<Prisma.$NominationPayload<ExtArgs>, T, "findFirstOrThrow", GlobalOmitOptions>, never, ExtArgs, GlobalOmitOptions>
 
     /**
-     * Find zero or more AddNominations that matches the filter.
+     * Find zero or more Nominations that matches the filter.
      * Note, that providing `undefined` is treated as the value not being there.
      * Read more here: https://pris.ly/d/null-undefined
-     * @param {addNominationFindManyArgs} args - Arguments to filter and select certain fields only.
+     * @param {NominationFindManyArgs} args - Arguments to filter and select certain fields only.
      * @example
-     * // Get all AddNominations
-     * const addNominations = await prisma.addNomination.findMany()
+     * // Get all Nominations
+     * const nominations = await prisma.nomination.findMany()
      * 
-     * // Get first 10 AddNominations
-     * const addNominations = await prisma.addNomination.findMany({ take: 10 })
+     * // Get first 10 Nominations
+     * const nominations = await prisma.nomination.findMany({ take: 10 })
      * 
      * // Only select the `id`
-     * const addNominationWithIdOnly = await prisma.addNomination.findMany({ select: { id: true } })
+     * const nominationWithIdOnly = await prisma.nomination.findMany({ select: { id: true } })
      * 
      */
-    findMany<T extends addNominationFindManyArgs>(args?: SelectSubset<T, addNominationFindManyArgs<ExtArgs>>): Prisma.PrismaPromise<$Result.GetResult<Prisma.$addNominationPayload<ExtArgs>, T, "findMany", GlobalOmitOptions>>
+    findMany<T extends NominationFindManyArgs>(args?: SelectSubset<T, NominationFindManyArgs<ExtArgs>>): Prisma.PrismaPromise<$Result.GetResult<Prisma.$NominationPayload<ExtArgs>, T, "findMany", GlobalOmitOptions>>
 
     /**
-     * Create a AddNomination.
-     * @param {addNominationCreateArgs} args - Arguments to create a AddNomination.
+     * Create a Nomination.
+     * @param {NominationCreateArgs} args - Arguments to create a Nomination.
      * @example
-     * // Create one AddNomination
-     * const AddNomination = await prisma.addNomination.create({
+     * // Create one Nomination
+     * const Nomination = await prisma.nomination.create({
      *   data: {
-     *     // ... data to create a AddNomination
+     *     // ... data to create a Nomination
      *   }
      * })
      * 
      */
-    create<T extends addNominationCreateArgs>(args: SelectSubset<T, addNominationCreateArgs<ExtArgs>>): Prisma__addNominationClient<$Result.GetResult<Prisma.$addNominationPayload<ExtArgs>, T, "create", GlobalOmitOptions>, never, ExtArgs, GlobalOmitOptions>
+    create<T extends NominationCreateArgs>(args: SelectSubset<T, NominationCreateArgs<ExtArgs>>): Prisma__NominationClient<$Result.GetResult<Prisma.$NominationPayload<ExtArgs>, T, "create", GlobalOmitOptions>, never, ExtArgs, GlobalOmitOptions>
 
     /**
-     * Create many AddNominations.
-     * @param {addNominationCreateManyArgs} args - Arguments to create many AddNominations.
+     * Create many Nominations.
+     * @param {NominationCreateManyArgs} args - Arguments to create many Nominations.
      * @example
-     * // Create many AddNominations
-     * const addNomination = await prisma.addNomination.createMany({
+     * // Create many Nominations
+     * const nomination = await prisma.nomination.createMany({
      *   data: [
      *     // ... provide data here
      *   ]
      * })
      *     
      */
-    createMany<T extends addNominationCreateManyArgs>(args?: SelectSubset<T, addNominationCreateManyArgs<ExtArgs>>): Prisma.PrismaPromise<BatchPayload>
+    createMany<T extends NominationCreateManyArgs>(args?: SelectSubset<T, NominationCreateManyArgs<ExtArgs>>): Prisma.PrismaPromise<BatchPayload>
 
     /**
-     * Create many AddNominations and returns the data saved in the database.
-     * @param {addNominationCreateManyAndReturnArgs} args - Arguments to create many AddNominations.
+     * Create many Nominations and returns the data saved in the database.
+     * @param {NominationCreateManyAndReturnArgs} args - Arguments to create many Nominations.
      * @example
-     * // Create many AddNominations
-     * const addNomination = await prisma.addNomination.createManyAndReturn({
+     * // Create many Nominations
+     * const nomination = await prisma.nomination.createManyAndReturn({
      *   data: [
      *     // ... provide data here
      *   ]
      * })
      * 
-     * // Create many AddNominations and only return the `id`
-     * const addNominationWithIdOnly = await prisma.addNomination.createManyAndReturn({
+     * // Create many Nominations and only return the `id`
+     * const nominationWithIdOnly = await prisma.nomination.createManyAndReturn({
      *   select: { id: true },
      *   data: [
      *     // ... provide data here
@@ -1231,28 +1243,28 @@ export namespace Prisma {
      * Read more here: https://pris.ly/d/null-undefined
      * 
      */
-    createManyAndReturn<T extends addNominationCreateManyAndReturnArgs>(args?: SelectSubset<T, addNominationCreateManyAndReturnArgs<ExtArgs>>): Prisma.PrismaPromise<$Result.GetResult<Prisma.$addNominationPayload<ExtArgs>, T, "createManyAndReturn", GlobalOmitOptions>>
+    createManyAndReturn<T extends NominationCreateManyAndReturnArgs>(args?: SelectSubset<T, NominationCreateManyAndReturnArgs<ExtArgs>>): Prisma.PrismaPromise<$Result.GetResult<Prisma.$NominationPayload<ExtArgs>, T, "createManyAndReturn", GlobalOmitOptions>>
 
     /**
-     * Delete a AddNomination.
-     * @param {addNominationDeleteArgs} args - Arguments to delete one AddNomination.
+     * Delete a Nomination.
+     * @param {NominationDeleteArgs} args - Arguments to delete one Nomination.
      * @example
-     * // Delete one AddNomination
-     * const AddNomination = await prisma.addNomination.delete({
+     * // Delete one Nomination
+     * const Nomination = await prisma.nomination.delete({
      *   where: {
-     *     // ... filter to delete one AddNomination
+     *     // ... filter to delete one Nomination
      *   }
      * })
      * 
      */
-    delete<T extends addNominationDeleteArgs>(args: SelectSubset<T, addNominationDeleteArgs<ExtArgs>>): Prisma__addNominationClient<$Result.GetResult<Prisma.$addNominationPayload<ExtArgs>, T, "delete", GlobalOmitOptions>, never, ExtArgs, GlobalOmitOptions>
+    delete<T extends NominationDeleteArgs>(args: SelectSubset<T, NominationDeleteArgs<ExtArgs>>): Prisma__NominationClient<$Result.GetResult<Prisma.$NominationPayload<ExtArgs>, T, "delete", GlobalOmitOptions>, never, ExtArgs, GlobalOmitOptions>
 
     /**
-     * Update one AddNomination.
-     * @param {addNominationUpdateArgs} args - Arguments to update one AddNomination.
+     * Update one Nomination.
+     * @param {NominationUpdateArgs} args - Arguments to update one Nomination.
      * @example
-     * // Update one AddNomination
-     * const addNomination = await prisma.addNomination.update({
+     * // Update one Nomination
+     * const nomination = await prisma.nomination.update({
      *   where: {
      *     // ... provide filter here
      *   },
@@ -1262,30 +1274,30 @@ export namespace Prisma {
      * })
      * 
      */
-    update<T extends addNominationUpdateArgs>(args: SelectSubset<T, addNominationUpdateArgs<ExtArgs>>): Prisma__addNominationClient<$Result.GetResult<Prisma.$addNominationPayload<ExtArgs>, T, "update", GlobalOmitOptions>, never, ExtArgs, GlobalOmitOptions>
+    update<T extends NominationUpdateArgs>(args: SelectSubset<T, NominationUpdateArgs<ExtArgs>>): Prisma__NominationClient<$Result.GetResult<Prisma.$NominationPayload<ExtArgs>, T, "update", GlobalOmitOptions>, never, ExtArgs, GlobalOmitOptions>
 
     /**
-     * Delete zero or more AddNominations.
-     * @param {addNominationDeleteManyArgs} args - Arguments to filter AddNominations to delete.
+     * Delete zero or more Nominations.
+     * @param {NominationDeleteManyArgs} args - Arguments to filter Nominations to delete.
      * @example
-     * // Delete a few AddNominations
-     * const { count } = await prisma.addNomination.deleteMany({
+     * // Delete a few Nominations
+     * const { count } = await prisma.nomination.deleteMany({
      *   where: {
      *     // ... provide filter here
      *   }
      * })
      * 
      */
-    deleteMany<T extends addNominationDeleteManyArgs>(args?: SelectSubset<T, addNominationDeleteManyArgs<ExtArgs>>): Prisma.PrismaPromise<BatchPayload>
+    deleteMany<T extends NominationDeleteManyArgs>(args?: SelectSubset<T, NominationDeleteManyArgs<ExtArgs>>): Prisma.PrismaPromise<BatchPayload>
 
     /**
-     * Update zero or more AddNominations.
+     * Update zero or more Nominations.
      * Note, that providing `undefined` is treated as the value not being there.
      * Read more here: https://pris.ly/d/null-undefined
-     * @param {addNominationUpdateManyArgs} args - Arguments to update one or more rows.
+     * @param {NominationUpdateManyArgs} args - Arguments to update one or more rows.
      * @example
-     * // Update many AddNominations
-     * const addNomination = await prisma.addNomination.updateMany({
+     * // Update many Nominations
+     * const nomination = await prisma.nomination.updateMany({
      *   where: {
      *     // ... provide filter here
      *   },
@@ -1295,14 +1307,14 @@ export namespace Prisma {
      * })
      * 
      */
-    updateMany<T extends addNominationUpdateManyArgs>(args: SelectSubset<T, addNominationUpdateManyArgs<ExtArgs>>): Prisma.PrismaPromise<BatchPayload>
+    updateMany<T extends NominationUpdateManyArgs>(args: SelectSubset<T, NominationUpdateManyArgs<ExtArgs>>): Prisma.PrismaPromise<BatchPayload>
 
     /**
-     * Update zero or more AddNominations and returns the data updated in the database.
-     * @param {addNominationUpdateManyAndReturnArgs} args - Arguments to update many AddNominations.
+     * Update zero or more Nominations and returns the data updated in the database.
+     * @param {NominationUpdateManyAndReturnArgs} args - Arguments to update many Nominations.
      * @example
-     * // Update many AddNominations
-     * const addNomination = await prisma.addNomination.updateManyAndReturn({
+     * // Update many Nominations
+     * const nomination = await prisma.nomination.updateManyAndReturn({
      *   where: {
      *     // ... provide filter here
      *   },
@@ -1311,8 +1323,8 @@ export namespace Prisma {
      *   ]
      * })
      * 
-     * // Update zero or more AddNominations and only return the `id`
-     * const addNominationWithIdOnly = await prisma.addNomination.updateManyAndReturn({
+     * // Update zero or more Nominations and only return the `id`
+     * const nominationWithIdOnly = await prisma.nomination.updateManyAndReturn({
      *   select: { id: true },
      *   where: {
      *     // ... provide filter here
@@ -1325,56 +1337,56 @@ export namespace Prisma {
      * Read more here: https://pris.ly/d/null-undefined
      * 
      */
-    updateManyAndReturn<T extends addNominationUpdateManyAndReturnArgs>(args: SelectSubset<T, addNominationUpdateManyAndReturnArgs<ExtArgs>>): Prisma.PrismaPromise<$Result.GetResult<Prisma.$addNominationPayload<ExtArgs>, T, "updateManyAndReturn", GlobalOmitOptions>>
+    updateManyAndReturn<T extends NominationUpdateManyAndReturnArgs>(args: SelectSubset<T, NominationUpdateManyAndReturnArgs<ExtArgs>>): Prisma.PrismaPromise<$Result.GetResult<Prisma.$NominationPayload<ExtArgs>, T, "updateManyAndReturn", GlobalOmitOptions>>
 
     /**
-     * Create or update one AddNomination.
-     * @param {addNominationUpsertArgs} args - Arguments to update or create a AddNomination.
+     * Create or update one Nomination.
+     * @param {NominationUpsertArgs} args - Arguments to update or create a Nomination.
      * @example
-     * // Update or create a AddNomination
-     * const addNomination = await prisma.addNomination.upsert({
+     * // Update or create a Nomination
+     * const nomination = await prisma.nomination.upsert({
      *   create: {
-     *     // ... data to create a AddNomination
+     *     // ... data to create a Nomination
      *   },
      *   update: {
      *     // ... in case it already exists, update
      *   },
      *   where: {
-     *     // ... the filter for the AddNomination we want to update
+     *     // ... the filter for the Nomination we want to update
      *   }
      * })
      */
-    upsert<T extends addNominationUpsertArgs>(args: SelectSubset<T, addNominationUpsertArgs<ExtArgs>>): Prisma__addNominationClient<$Result.GetResult<Prisma.$addNominationPayload<ExtArgs>, T, "upsert", GlobalOmitOptions>, never, ExtArgs, GlobalOmitOptions>
+    upsert<T extends NominationUpsertArgs>(args: SelectSubset<T, NominationUpsertArgs<ExtArgs>>): Prisma__NominationClient<$Result.GetResult<Prisma.$NominationPayload<ExtArgs>, T, "upsert", GlobalOmitOptions>, never, ExtArgs, GlobalOmitOptions>
 
 
     /**
-     * Count the number of AddNominations.
+     * Count the number of Nominations.
      * Note, that providing `undefined` is treated as the value not being there.
      * Read more here: https://pris.ly/d/null-undefined
-     * @param {addNominationCountArgs} args - Arguments to filter AddNominations to count.
+     * @param {NominationCountArgs} args - Arguments to filter Nominations to count.
      * @example
-     * // Count the number of AddNominations
-     * const count = await prisma.addNomination.count({
+     * // Count the number of Nominations
+     * const count = await prisma.nomination.count({
      *   where: {
-     *     // ... the filter for the AddNominations we want to count
+     *     // ... the filter for the Nominations we want to count
      *   }
      * })
     **/
-    count<T extends addNominationCountArgs>(
-      args?: Subset<T, addNominationCountArgs>,
+    count<T extends NominationCountArgs>(
+      args?: Subset<T, NominationCountArgs>,
     ): Prisma.PrismaPromise<
       T extends $Utils.Record<'select', any>
         ? T['select'] extends true
           ? number
-          : GetScalarType<T['select'], AddNominationCountAggregateOutputType>
+          : GetScalarType<T['select'], NominationCountAggregateOutputType>
         : number
     >
 
     /**
-     * Allows you to perform aggregations operations on a AddNomination.
+     * Allows you to perform aggregations operations on a Nomination.
      * Note, that providing `undefined` is treated as the value not being there.
      * Read more here: https://pris.ly/d/null-undefined
-     * @param {AddNominationAggregateArgs} args - Select which aggregations you would like to apply and on what fields.
+     * @param {NominationAggregateArgs} args - Select which aggregations you would like to apply and on what fields.
      * @example
      * // Ordered by age ascending
      * // Where email contains prisma.io
@@ -1394,13 +1406,13 @@ export namespace Prisma {
      *   take: 10,
      * })
     **/
-    aggregate<T extends AddNominationAggregateArgs>(args: Subset<T, AddNominationAggregateArgs>): Prisma.PrismaPromise<GetAddNominationAggregateType<T>>
+    aggregate<T extends NominationAggregateArgs>(args: Subset<T, NominationAggregateArgs>): Prisma.PrismaPromise<GetNominationAggregateType<T>>
 
     /**
-     * Group by AddNomination.
+     * Group by Nomination.
      * Note, that providing `undefined` is treated as the value not being there.
      * Read more here: https://pris.ly/d/null-undefined
-     * @param {addNominationGroupByArgs} args - Group by arguments.
+     * @param {NominationGroupByArgs} args - Group by arguments.
      * @example
      * // Group by city, order by createdAt, get count
      * const result = await prisma.user.groupBy({
@@ -1415,14 +1427,14 @@ export namespace Prisma {
      * 
     **/
     groupBy<
-      T extends addNominationGroupByArgs,
+      T extends NominationGroupByArgs,
       HasSelectOrTake extends Or<
         Extends<'skip', Keys<T>>,
         Extends<'take', Keys<T>>
       >,
       OrderByArg extends True extends HasSelectOrTake
-        ? { orderBy: addNominationGroupByArgs['orderBy'] }
-        : { orderBy?: addNominationGroupByArgs['orderBy'] },
+        ? { orderBy: NominationGroupByArgs['orderBy'] }
+        : { orderBy?: NominationGroupByArgs['orderBy'] },
       OrderFields extends ExcludeUnderscoreKeys<Keys<MaybeTupleToUnion<T['orderBy']>>>,
       ByFields extends MaybeTupleToUnion<T['by']>,
       ByValid extends Has<ByFields, OrderFields>,
@@ -1471,20 +1483,20 @@ export namespace Prisma {
             ? never
             : `Error: Field "${P}" in "orderBy" needs to be provided in "by"`
         }[OrderFields]
-    >(args: SubsetIntersection<T, addNominationGroupByArgs, OrderByArg> & InputErrors): {} extends InputErrors ? GetAddNominationGroupByPayload<T> : Prisma.PrismaPromise<InputErrors>
+    >(args: SubsetIntersection<T, NominationGroupByArgs, OrderByArg> & InputErrors): {} extends InputErrors ? GetNominationGroupByPayload<T> : Prisma.PrismaPromise<InputErrors>
   /**
-   * Fields of the addNomination model
+   * Fields of the Nomination model
    */
-  readonly fields: addNominationFieldRefs;
+  readonly fields: NominationFieldRefs;
   }
 
   /**
-   * The delegate class that acts as a "Promise-like" for addNomination.
+   * The delegate class that acts as a "Promise-like" for Nomination.
    * Why is this prefixed with `Prisma__`?
    * Because we want to prevent naming conflicts as mentioned in
    * https://github.com/prisma/prisma-client-js/issues/707
    */
-  export interface Prisma__addNominationClient<T, Null = never, ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs, GlobalOmitOptions = {}> extends Prisma.PrismaPromise<T> {
+  export interface Prisma__NominationClient<T, Null = never, ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs, GlobalOmitOptions = {}> extends Prisma.PrismaPromise<T> {
     readonly [Symbol.toStringTag]: "PrismaPromise"
     /**
      * Attaches callbacks for the resolution and/or rejection of the Promise.
@@ -1512,374 +1524,375 @@ export namespace Prisma {
 
 
   /**
-   * Fields of the addNomination model
+   * Fields of the Nomination model
    */
-  interface addNominationFieldRefs {
-    readonly id: FieldRef<"addNomination", 'Int'>
-    readonly nominee: FieldRef<"addNomination", 'String'>
-    readonly category: FieldRef<"addNomination", 'String'>
-    readonly quantity: FieldRef<"addNomination", 'String'>
+  interface NominationFieldRefs {
+    readonly id: FieldRef<"Nomination", 'Int'>
+    readonly createdAt: FieldRef<"Nomination", 'DateTime'>
+    readonly nominee: FieldRef<"Nomination", 'String'>
+    readonly category: FieldRef<"Nomination", 'String'>
+    readonly quantity: FieldRef<"Nomination", 'String'>
   }
     
 
   // Custom InputTypes
   /**
-   * addNomination findUnique
+   * Nomination findUnique
    */
-  export type addNominationFindUniqueArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
+  export type NominationFindUniqueArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
     /**
-     * Select specific fields to fetch from the addNomination
+     * Select specific fields to fetch from the Nomination
      */
-    select?: addNominationSelect<ExtArgs> | null
+    select?: NominationSelect<ExtArgs> | null
     /**
-     * Omit specific fields from the addNomination
+     * Omit specific fields from the Nomination
      */
-    omit?: addNominationOmit<ExtArgs> | null
+    omit?: NominationOmit<ExtArgs> | null
     /**
-     * Filter, which addNomination to fetch.
+     * Filter, which Nomination to fetch.
      */
-    where: addNominationWhereUniqueInput
+    where: NominationWhereUniqueInput
   }
 
   /**
-   * addNomination findUniqueOrThrow
+   * Nomination findUniqueOrThrow
    */
-  export type addNominationFindUniqueOrThrowArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
+  export type NominationFindUniqueOrThrowArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
     /**
-     * Select specific fields to fetch from the addNomination
+     * Select specific fields to fetch from the Nomination
      */
-    select?: addNominationSelect<ExtArgs> | null
+    select?: NominationSelect<ExtArgs> | null
     /**
-     * Omit specific fields from the addNomination
+     * Omit specific fields from the Nomination
      */
-    omit?: addNominationOmit<ExtArgs> | null
+    omit?: NominationOmit<ExtArgs> | null
     /**
-     * Filter, which addNomination to fetch.
+     * Filter, which Nomination to fetch.
      */
-    where: addNominationWhereUniqueInput
+    where: NominationWhereUniqueInput
   }
 
   /**
-   * addNomination findFirst
+   * Nomination findFirst
    */
-  export type addNominationFindFirstArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
+  export type NominationFindFirstArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
     /**
-     * Select specific fields to fetch from the addNomination
+     * Select specific fields to fetch from the Nomination
      */
-    select?: addNominationSelect<ExtArgs> | null
+    select?: NominationSelect<ExtArgs> | null
     /**
-     * Omit specific fields from the addNomination
+     * Omit specific fields from the Nomination
      */
-    omit?: addNominationOmit<ExtArgs> | null
+    omit?: NominationOmit<ExtArgs> | null
     /**
-     * Filter, which addNomination to fetch.
+     * Filter, which Nomination to fetch.
      */
-    where?: addNominationWhereInput
+    where?: NominationWhereInput
     /**
      * {@link https://www.prisma.io/docs/concepts/components/prisma-client/sorting Sorting Docs}
      * 
-     * Determine the order of addNominations to fetch.
+     * Determine the order of Nominations to fetch.
      */
-    orderBy?: addNominationOrderByWithRelationInput | addNominationOrderByWithRelationInput[]
+    orderBy?: NominationOrderByWithRelationInput | NominationOrderByWithRelationInput[]
     /**
      * {@link https://www.prisma.io/docs/concepts/components/prisma-client/pagination#cursor-based-pagination Cursor Docs}
      * 
-     * Sets the position for searching for addNominations.
+     * Sets the position for searching for Nominations.
      */
-    cursor?: addNominationWhereUniqueInput
+    cursor?: NominationWhereUniqueInput
     /**
      * {@link https://www.prisma.io/docs/concepts/components/prisma-client/pagination Pagination Docs}
      * 
-     * Take `±n` addNominations from the position of the cursor.
+     * Take `±n` Nominations from the position of the cursor.
      */
     take?: number
     /**
      * {@link https://www.prisma.io/docs/concepts/components/prisma-client/pagination Pagination Docs}
      * 
-     * Skip the first `n` addNominations.
+     * Skip the first `n` Nominations.
      */
     skip?: number
     /**
      * {@link https://www.prisma.io/docs/concepts/components/prisma-client/distinct Distinct Docs}
      * 
-     * Filter by unique combinations of addNominations.
+     * Filter by unique combinations of Nominations.
      */
-    distinct?: AddNominationScalarFieldEnum | AddNominationScalarFieldEnum[]
+    distinct?: NominationScalarFieldEnum | NominationScalarFieldEnum[]
   }
 
   /**
-   * addNomination findFirstOrThrow
+   * Nomination findFirstOrThrow
    */
-  export type addNominationFindFirstOrThrowArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
+  export type NominationFindFirstOrThrowArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
     /**
-     * Select specific fields to fetch from the addNomination
+     * Select specific fields to fetch from the Nomination
      */
-    select?: addNominationSelect<ExtArgs> | null
+    select?: NominationSelect<ExtArgs> | null
     /**
-     * Omit specific fields from the addNomination
+     * Omit specific fields from the Nomination
      */
-    omit?: addNominationOmit<ExtArgs> | null
+    omit?: NominationOmit<ExtArgs> | null
     /**
-     * Filter, which addNomination to fetch.
+     * Filter, which Nomination to fetch.
      */
-    where?: addNominationWhereInput
+    where?: NominationWhereInput
     /**
      * {@link https://www.prisma.io/docs/concepts/components/prisma-client/sorting Sorting Docs}
      * 
-     * Determine the order of addNominations to fetch.
+     * Determine the order of Nominations to fetch.
      */
-    orderBy?: addNominationOrderByWithRelationInput | addNominationOrderByWithRelationInput[]
+    orderBy?: NominationOrderByWithRelationInput | NominationOrderByWithRelationInput[]
     /**
      * {@link https://www.prisma.io/docs/concepts/components/prisma-client/pagination#cursor-based-pagination Cursor Docs}
      * 
-     * Sets the position for searching for addNominations.
+     * Sets the position for searching for Nominations.
      */
-    cursor?: addNominationWhereUniqueInput
+    cursor?: NominationWhereUniqueInput
     /**
      * {@link https://www.prisma.io/docs/concepts/components/prisma-client/pagination Pagination Docs}
      * 
-     * Take `±n` addNominations from the position of the cursor.
+     * Take `±n` Nominations from the position of the cursor.
      */
     take?: number
     /**
      * {@link https://www.prisma.io/docs/concepts/components/prisma-client/pagination Pagination Docs}
      * 
-     * Skip the first `n` addNominations.
+     * Skip the first `n` Nominations.
      */
     skip?: number
     /**
      * {@link https://www.prisma.io/docs/concepts/components/prisma-client/distinct Distinct Docs}
      * 
-     * Filter by unique combinations of addNominations.
+     * Filter by unique combinations of Nominations.
      */
-    distinct?: AddNominationScalarFieldEnum | AddNominationScalarFieldEnum[]
+    distinct?: NominationScalarFieldEnum | NominationScalarFieldEnum[]
   }
 
   /**
-   * addNomination findMany
+   * Nomination findMany
    */
-  export type addNominationFindManyArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
+  export type NominationFindManyArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
     /**
-     * Select specific fields to fetch from the addNomination
+     * Select specific fields to fetch from the Nomination
      */
-    select?: addNominationSelect<ExtArgs> | null
+    select?: NominationSelect<ExtArgs> | null
     /**
-     * Omit specific fields from the addNomination
+     * Omit specific fields from the Nomination
      */
-    omit?: addNominationOmit<ExtArgs> | null
+    omit?: NominationOmit<ExtArgs> | null
     /**
-     * Filter, which addNominations to fetch.
+     * Filter, which Nominations to fetch.
      */
-    where?: addNominationWhereInput
+    where?: NominationWhereInput
     /**
      * {@link https://www.prisma.io/docs/concepts/components/prisma-client/sorting Sorting Docs}
      * 
-     * Determine the order of addNominations to fetch.
+     * Determine the order of Nominations to fetch.
      */
-    orderBy?: addNominationOrderByWithRelationInput | addNominationOrderByWithRelationInput[]
+    orderBy?: NominationOrderByWithRelationInput | NominationOrderByWithRelationInput[]
     /**
      * {@link https://www.prisma.io/docs/concepts/components/prisma-client/pagination#cursor-based-pagination Cursor Docs}
      * 
-     * Sets the position for listing addNominations.
+     * Sets the position for listing Nominations.
      */
-    cursor?: addNominationWhereUniqueInput
+    cursor?: NominationWhereUniqueInput
     /**
      * {@link https://www.prisma.io/docs/concepts/components/prisma-client/pagination Pagination Docs}
      * 
-     * Take `±n` addNominations from the position of the cursor.
+     * Take `±n` Nominations from the position of the cursor.
      */
     take?: number
     /**
      * {@link https://www.prisma.io/docs/concepts/components/prisma-client/pagination Pagination Docs}
      * 
-     * Skip the first `n` addNominations.
+     * Skip the first `n` Nominations.
      */
     skip?: number
-    distinct?: AddNominationScalarFieldEnum | AddNominationScalarFieldEnum[]
+    distinct?: NominationScalarFieldEnum | NominationScalarFieldEnum[]
   }
 
   /**
-   * addNomination create
+   * Nomination create
    */
-  export type addNominationCreateArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
+  export type NominationCreateArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
     /**
-     * Select specific fields to fetch from the addNomination
+     * Select specific fields to fetch from the Nomination
      */
-    select?: addNominationSelect<ExtArgs> | null
+    select?: NominationSelect<ExtArgs> | null
     /**
-     * Omit specific fields from the addNomination
+     * Omit specific fields from the Nomination
      */
-    omit?: addNominationOmit<ExtArgs> | null
+    omit?: NominationOmit<ExtArgs> | null
     /**
-     * The data needed to create a addNomination.
+     * The data needed to create a Nomination.
      */
-    data: XOR<addNominationCreateInput, addNominationUncheckedCreateInput>
+    data: XOR<NominationCreateInput, NominationUncheckedCreateInput>
   }
 
   /**
-   * addNomination createMany
+   * Nomination createMany
    */
-  export type addNominationCreateManyArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
+  export type NominationCreateManyArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
     /**
-     * The data used to create many addNominations.
+     * The data used to create many Nominations.
      */
-    data: addNominationCreateManyInput | addNominationCreateManyInput[]
+    data: NominationCreateManyInput | NominationCreateManyInput[]
   }
 
   /**
-   * addNomination createManyAndReturn
+   * Nomination createManyAndReturn
    */
-  export type addNominationCreateManyAndReturnArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
+  export type NominationCreateManyAndReturnArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
     /**
-     * Select specific fields to fetch from the addNomination
+     * Select specific fields to fetch from the Nomination
      */
-    select?: addNominationSelectCreateManyAndReturn<ExtArgs> | null
+    select?: NominationSelectCreateManyAndReturn<ExtArgs> | null
     /**
-     * Omit specific fields from the addNomination
+     * Omit specific fields from the Nomination
      */
-    omit?: addNominationOmit<ExtArgs> | null
+    omit?: NominationOmit<ExtArgs> | null
     /**
-     * The data used to create many addNominations.
+     * The data used to create many Nominations.
      */
-    data: addNominationCreateManyInput | addNominationCreateManyInput[]
+    data: NominationCreateManyInput | NominationCreateManyInput[]
   }
 
   /**
-   * addNomination update
+   * Nomination update
    */
-  export type addNominationUpdateArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
+  export type NominationUpdateArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
     /**
-     * Select specific fields to fetch from the addNomination
+     * Select specific fields to fetch from the Nomination
      */
-    select?: addNominationSelect<ExtArgs> | null
+    select?: NominationSelect<ExtArgs> | null
     /**
-     * Omit specific fields from the addNomination
+     * Omit specific fields from the Nomination
      */
-    omit?: addNominationOmit<ExtArgs> | null
+    omit?: NominationOmit<ExtArgs> | null
     /**
-     * The data needed to update a addNomination.
+     * The data needed to update a Nomination.
      */
-    data: XOR<addNominationUpdateInput, addNominationUncheckedUpdateInput>
+    data: XOR<NominationUpdateInput, NominationUncheckedUpdateInput>
     /**
-     * Choose, which addNomination to update.
+     * Choose, which Nomination to update.
      */
-    where: addNominationWhereUniqueInput
+    where: NominationWhereUniqueInput
   }
 
   /**
-   * addNomination updateMany
+   * Nomination updateMany
    */
-  export type addNominationUpdateManyArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
+  export type NominationUpdateManyArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
     /**
-     * The data used to update addNominations.
+     * The data used to update Nominations.
      */
-    data: XOR<addNominationUpdateManyMutationInput, addNominationUncheckedUpdateManyInput>
+    data: XOR<NominationUpdateManyMutationInput, NominationUncheckedUpdateManyInput>
     /**
-     * Filter which addNominations to update
+     * Filter which Nominations to update
      */
-    where?: addNominationWhereInput
+    where?: NominationWhereInput
     /**
-     * Limit how many addNominations to update.
+     * Limit how many Nominations to update.
      */
     limit?: number
   }
 
   /**
-   * addNomination updateManyAndReturn
+   * Nomination updateManyAndReturn
    */
-  export type addNominationUpdateManyAndReturnArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
+  export type NominationUpdateManyAndReturnArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
     /**
-     * Select specific fields to fetch from the addNomination
+     * Select specific fields to fetch from the Nomination
      */
-    select?: addNominationSelectUpdateManyAndReturn<ExtArgs> | null
+    select?: NominationSelectUpdateManyAndReturn<ExtArgs> | null
     /**
-     * Omit specific fields from the addNomination
+     * Omit specific fields from the Nomination
      */
-    omit?: addNominationOmit<ExtArgs> | null
+    omit?: NominationOmit<ExtArgs> | null
     /**
-     * The data used to update addNominations.
+     * The data used to update Nominations.
      */
-    data: XOR<addNominationUpdateManyMutationInput, addNominationUncheckedUpdateManyInput>
+    data: XOR<NominationUpdateManyMutationInput, NominationUncheckedUpdateManyInput>
     /**
-     * Filter which addNominations to update
+     * Filter which Nominations to update
      */
-    where?: addNominationWhereInput
+    where?: NominationWhereInput
     /**
-     * Limit how many addNominations to update.
+     * Limit how many Nominations to update.
      */
     limit?: number
   }
 
   /**
-   * addNomination upsert
+   * Nomination upsert
    */
-  export type addNominationUpsertArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
+  export type NominationUpsertArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
     /**
-     * Select specific fields to fetch from the addNomination
+     * Select specific fields to fetch from the Nomination
      */
-    select?: addNominationSelect<ExtArgs> | null
+    select?: NominationSelect<ExtArgs> | null
     /**
-     * Omit specific fields from the addNomination
+     * Omit specific fields from the Nomination
      */
-    omit?: addNominationOmit<ExtArgs> | null
+    omit?: NominationOmit<ExtArgs> | null
     /**
-     * The filter to search for the addNomination to update in case it exists.
+     * The filter to search for the Nomination to update in case it exists.
      */
-    where: addNominationWhereUniqueInput
+    where: NominationWhereUniqueInput
     /**
-     * In case the addNomination found by the `where` argument doesn't exist, create a new addNomination with this data.
+     * In case the Nomination found by the `where` argument doesn't exist, create a new Nomination with this data.
      */
-    create: XOR<addNominationCreateInput, addNominationUncheckedCreateInput>
+    create: XOR<NominationCreateInput, NominationUncheckedCreateInput>
     /**
-     * In case the addNomination was found with the provided `where` argument, update it with this data.
+     * In case the Nomination was found with the provided `where` argument, update it with this data.
      */
-    update: XOR<addNominationUpdateInput, addNominationUncheckedUpdateInput>
+    update: XOR<NominationUpdateInput, NominationUncheckedUpdateInput>
   }
 
   /**
-   * addNomination delete
+   * Nomination delete
    */
-  export type addNominationDeleteArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
+  export type NominationDeleteArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
     /**
-     * Select specific fields to fetch from the addNomination
+     * Select specific fields to fetch from the Nomination
      */
-    select?: addNominationSelect<ExtArgs> | null
+    select?: NominationSelect<ExtArgs> | null
     /**
-     * Omit specific fields from the addNomination
+     * Omit specific fields from the Nomination
      */
-    omit?: addNominationOmit<ExtArgs> | null
+    omit?: NominationOmit<ExtArgs> | null
     /**
-     * Filter which addNomination to delete.
+     * Filter which Nomination to delete.
      */
-    where: addNominationWhereUniqueInput
+    where: NominationWhereUniqueInput
   }
 
   /**
-   * addNomination deleteMany
+   * Nomination deleteMany
    */
-  export type addNominationDeleteManyArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
+  export type NominationDeleteManyArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
     /**
-     * Filter which addNominations to delete
+     * Filter which Nominations to delete
      */
-    where?: addNominationWhereInput
+    where?: NominationWhereInput
     /**
-     * Limit how many addNominations to delete.
+     * Limit how many Nominations to delete.
      */
     limit?: number
   }
 
   /**
-   * addNomination without action
+   * Nomination without action
    */
-  export type addNominationDefaultArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
+  export type NominationDefaultArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
     /**
-     * Select specific fields to fetch from the addNomination
+     * Select specific fields to fetch from the Nomination
      */
-    select?: addNominationSelect<ExtArgs> | null
+    select?: NominationSelect<ExtArgs> | null
     /**
-     * Omit specific fields from the addNomination
+     * Omit specific fields from the Nomination
      */
-    omit?: addNominationOmit<ExtArgs> | null
+    omit?: NominationOmit<ExtArgs> | null
   }
 
 
@@ -1894,14 +1907,15 @@ export namespace Prisma {
   export type TransactionIsolationLevel = (typeof TransactionIsolationLevel)[keyof typeof TransactionIsolationLevel]
 
 
-  export const AddNominationScalarFieldEnum: {
+  export const NominationScalarFieldEnum: {
     id: 'id',
+    createdAt: 'createdAt',
     nominee: 'nominee',
     category: 'category',
     quantity: 'quantity'
   };
 
-  export type AddNominationScalarFieldEnum = (typeof AddNominationScalarFieldEnum)[keyof typeof AddNominationScalarFieldEnum]
+  export type NominationScalarFieldEnum = (typeof NominationScalarFieldEnum)[keyof typeof NominationScalarFieldEnum]
 
 
   export const SortOrder: {
@@ -1925,6 +1939,13 @@ export namespace Prisma {
 
 
   /**
+   * Reference to a field of type 'DateTime'
+   */
+  export type DateTimeFieldRefInput<$PrismaModel> = FieldRefInputType<$PrismaModel, 'DateTime'>
+    
+
+
+  /**
    * Reference to a field of type 'String'
    */
   export type StringFieldRefInput<$PrismaModel> = FieldRefInputType<$PrismaModel, 'String'>
@@ -1941,96 +1962,108 @@ export namespace Prisma {
    */
 
 
-  export type addNominationWhereInput = {
-    AND?: addNominationWhereInput | addNominationWhereInput[]
-    OR?: addNominationWhereInput[]
-    NOT?: addNominationWhereInput | addNominationWhereInput[]
-    id?: IntFilter<"addNomination"> | number
-    nominee?: StringFilter<"addNomination"> | string
-    category?: StringFilter<"addNomination"> | string
-    quantity?: StringFilter<"addNomination"> | string
+  export type NominationWhereInput = {
+    AND?: NominationWhereInput | NominationWhereInput[]
+    OR?: NominationWhereInput[]
+    NOT?: NominationWhereInput | NominationWhereInput[]
+    id?: IntFilter<"Nomination"> | number
+    createdAt?: DateTimeFilter<"Nomination"> | Date | string
+    nominee?: StringFilter<"Nomination"> | string
+    category?: StringFilter<"Nomination"> | string
+    quantity?: StringFilter<"Nomination"> | string
   }
 
-  export type addNominationOrderByWithRelationInput = {
+  export type NominationOrderByWithRelationInput = {
     id?: SortOrder
+    createdAt?: SortOrder
     nominee?: SortOrder
     category?: SortOrder
     quantity?: SortOrder
   }
 
-  export type addNominationWhereUniqueInput = Prisma.AtLeast<{
+  export type NominationWhereUniqueInput = Prisma.AtLeast<{
     id?: number
-    AND?: addNominationWhereInput | addNominationWhereInput[]
-    OR?: addNominationWhereInput[]
-    NOT?: addNominationWhereInput | addNominationWhereInput[]
-    nominee?: StringFilter<"addNomination"> | string
-    category?: StringFilter<"addNomination"> | string
-    quantity?: StringFilter<"addNomination"> | string
+    AND?: NominationWhereInput | NominationWhereInput[]
+    OR?: NominationWhereInput[]
+    NOT?: NominationWhereInput | NominationWhereInput[]
+    createdAt?: DateTimeFilter<"Nomination"> | Date | string
+    nominee?: StringFilter<"Nomination"> | string
+    category?: StringFilter<"Nomination"> | string
+    quantity?: StringFilter<"Nomination"> | string
   }, "id">
 
-  export type addNominationOrderByWithAggregationInput = {
+  export type NominationOrderByWithAggregationInput = {
     id?: SortOrder
+    createdAt?: SortOrder
     nominee?: SortOrder
     category?: SortOrder
     quantity?: SortOrder
-    _count?: addNominationCountOrderByAggregateInput
-    _avg?: addNominationAvgOrderByAggregateInput
-    _max?: addNominationMaxOrderByAggregateInput
-    _min?: addNominationMinOrderByAggregateInput
-    _sum?: addNominationSumOrderByAggregateInput
+    _count?: NominationCountOrderByAggregateInput
+    _avg?: NominationAvgOrderByAggregateInput
+    _max?: NominationMaxOrderByAggregateInput
+    _min?: NominationMinOrderByAggregateInput
+    _sum?: NominationSumOrderByAggregateInput
   }
 
-  export type addNominationScalarWhereWithAggregatesInput = {
-    AND?: addNominationScalarWhereWithAggregatesInput | addNominationScalarWhereWithAggregatesInput[]
-    OR?: addNominationScalarWhereWithAggregatesInput[]
-    NOT?: addNominationScalarWhereWithAggregatesInput | addNominationScalarWhereWithAggregatesInput[]
-    id?: IntWithAggregatesFilter<"addNomination"> | number
-    nominee?: StringWithAggregatesFilter<"addNomination"> | string
-    category?: StringWithAggregatesFilter<"addNomination"> | string
-    quantity?: StringWithAggregatesFilter<"addNomination"> | string
+  export type NominationScalarWhereWithAggregatesInput = {
+    AND?: NominationScalarWhereWithAggregatesInput | NominationScalarWhereWithAggregatesInput[]
+    OR?: NominationScalarWhereWithAggregatesInput[]
+    NOT?: NominationScalarWhereWithAggregatesInput | NominationScalarWhereWithAggregatesInput[]
+    id?: IntWithAggregatesFilter<"Nomination"> | number
+    createdAt?: DateTimeWithAggregatesFilter<"Nomination"> | Date | string
+    nominee?: StringWithAggregatesFilter<"Nomination"> | string
+    category?: StringWithAggregatesFilter<"Nomination"> | string
+    quantity?: StringWithAggregatesFilter<"Nomination"> | string
   }
 
-  export type addNominationCreateInput = {
+  export type NominationCreateInput = {
+    createdAt?: Date | string
     nominee: string
     category: string
     quantity: string
   }
 
-  export type addNominationUncheckedCreateInput = {
+  export type NominationUncheckedCreateInput = {
     id?: number
+    createdAt?: Date | string
     nominee: string
     category: string
     quantity: string
   }
 
-  export type addNominationUpdateInput = {
+  export type NominationUpdateInput = {
+    createdAt?: DateTimeFieldUpdateOperationsInput | Date | string
     nominee?: StringFieldUpdateOperationsInput | string
     category?: StringFieldUpdateOperationsInput | string
     quantity?: StringFieldUpdateOperationsInput | string
   }
 
-  export type addNominationUncheckedUpdateInput = {
+  export type NominationUncheckedUpdateInput = {
     id?: IntFieldUpdateOperationsInput | number
+    createdAt?: DateTimeFieldUpdateOperationsInput | Date | string
     nominee?: StringFieldUpdateOperationsInput | string
     category?: StringFieldUpdateOperationsInput | string
     quantity?: StringFieldUpdateOperationsInput | string
   }
 
-  export type addNominationCreateManyInput = {
+  export type NominationCreateManyInput = {
     id?: number
+    createdAt?: Date | string
     nominee: string
     category: string
     quantity: string
   }
 
-  export type addNominationUpdateManyMutationInput = {
+  export type NominationUpdateManyMutationInput = {
+    createdAt?: DateTimeFieldUpdateOperationsInput | Date | string
     nominee?: StringFieldUpdateOperationsInput | string
     category?: StringFieldUpdateOperationsInput | string
     quantity?: StringFieldUpdateOperationsInput | string
   }
 
-  export type addNominationUncheckedUpdateManyInput = {
+  export type NominationUncheckedUpdateManyInput = {
     id?: IntFieldUpdateOperationsInput | number
+    createdAt?: DateTimeFieldUpdateOperationsInput | Date | string
     nominee?: StringFieldUpdateOperationsInput | string
     category?: StringFieldUpdateOperationsInput | string
     quantity?: StringFieldUpdateOperationsInput | string
@@ -2047,6 +2080,17 @@ export namespace Prisma {
     not?: NestedIntFilter<$PrismaModel> | number
   }
 
+  export type DateTimeFilter<$PrismaModel = never> = {
+    equals?: Date | string | DateTimeFieldRefInput<$PrismaModel>
+    in?: Date[] | string[]
+    notIn?: Date[] | string[]
+    lt?: Date | string | DateTimeFieldRefInput<$PrismaModel>
+    lte?: Date | string | DateTimeFieldRefInput<$PrismaModel>
+    gt?: Date | string | DateTimeFieldRefInput<$PrismaModel>
+    gte?: Date | string | DateTimeFieldRefInput<$PrismaModel>
+    not?: NestedDateTimeFilter<$PrismaModel> | Date | string
+  }
+
   export type StringFilter<$PrismaModel = never> = {
     equals?: string | StringFieldRefInput<$PrismaModel>
     in?: string[]
@@ -2061,32 +2105,35 @@ export namespace Prisma {
     not?: NestedStringFilter<$PrismaModel> | string
   }
 
-  export type addNominationCountOrderByAggregateInput = {
+  export type NominationCountOrderByAggregateInput = {
     id?: SortOrder
+    createdAt?: SortOrder
     nominee?: SortOrder
     category?: SortOrder
     quantity?: SortOrder
   }
 
-  export type addNominationAvgOrderByAggregateInput = {
+  export type NominationAvgOrderByAggregateInput = {
     id?: SortOrder
   }
 
-  export type addNominationMaxOrderByAggregateInput = {
+  export type NominationMaxOrderByAggregateInput = {
     id?: SortOrder
+    createdAt?: SortOrder
     nominee?: SortOrder
     category?: SortOrder
     quantity?: SortOrder
   }
 
-  export type addNominationMinOrderByAggregateInput = {
+  export type NominationMinOrderByAggregateInput = {
     id?: SortOrder
+    createdAt?: SortOrder
     nominee?: SortOrder
     category?: SortOrder
     quantity?: SortOrder
   }
 
-  export type addNominationSumOrderByAggregateInput = {
+  export type NominationSumOrderByAggregateInput = {
     id?: SortOrder
   }
 
@@ -2106,6 +2153,20 @@ export namespace Prisma {
     _max?: NestedIntFilter<$PrismaModel>
   }
 
+  export type DateTimeWithAggregatesFilter<$PrismaModel = never> = {
+    equals?: Date | string | DateTimeFieldRefInput<$PrismaModel>
+    in?: Date[] | string[]
+    notIn?: Date[] | string[]
+    lt?: Date | string | DateTimeFieldRefInput<$PrismaModel>
+    lte?: Date | string | DateTimeFieldRefInput<$PrismaModel>
+    gt?: Date | string | DateTimeFieldRefInput<$PrismaModel>
+    gte?: Date | string | DateTimeFieldRefInput<$PrismaModel>
+    not?: NestedDateTimeWithAggregatesFilter<$PrismaModel> | Date | string
+    _count?: NestedIntFilter<$PrismaModel>
+    _min?: NestedDateTimeFilter<$PrismaModel>
+    _max?: NestedDateTimeFilter<$PrismaModel>
+  }
+
   export type StringWithAggregatesFilter<$PrismaModel = never> = {
     equals?: string | StringFieldRefInput<$PrismaModel>
     in?: string[]
@@ -2121,6 +2182,10 @@ export namespace Prisma {
     _count?: NestedIntFilter<$PrismaModel>
     _min?: NestedStringFilter<$PrismaModel>
     _max?: NestedStringFilter<$PrismaModel>
+  }
+
+  export type DateTimeFieldUpdateOperationsInput = {
+    set?: Date | string
   }
 
   export type StringFieldUpdateOperationsInput = {
@@ -2144,6 +2209,17 @@ export namespace Prisma {
     gt?: number | IntFieldRefInput<$PrismaModel>
     gte?: number | IntFieldRefInput<$PrismaModel>
     not?: NestedIntFilter<$PrismaModel> | number
+  }
+
+  export type NestedDateTimeFilter<$PrismaModel = never> = {
+    equals?: Date | string | DateTimeFieldRefInput<$PrismaModel>
+    in?: Date[] | string[]
+    notIn?: Date[] | string[]
+    lt?: Date | string | DateTimeFieldRefInput<$PrismaModel>
+    lte?: Date | string | DateTimeFieldRefInput<$PrismaModel>
+    gt?: Date | string | DateTimeFieldRefInput<$PrismaModel>
+    gte?: Date | string | DateTimeFieldRefInput<$PrismaModel>
+    not?: NestedDateTimeFilter<$PrismaModel> | Date | string
   }
 
   export type NestedStringFilter<$PrismaModel = never> = {
@@ -2185,6 +2261,20 @@ export namespace Prisma {
     gt?: number | FloatFieldRefInput<$PrismaModel>
     gte?: number | FloatFieldRefInput<$PrismaModel>
     not?: NestedFloatFilter<$PrismaModel> | number
+  }
+
+  export type NestedDateTimeWithAggregatesFilter<$PrismaModel = never> = {
+    equals?: Date | string | DateTimeFieldRefInput<$PrismaModel>
+    in?: Date[] | string[]
+    notIn?: Date[] | string[]
+    lt?: Date | string | DateTimeFieldRefInput<$PrismaModel>
+    lte?: Date | string | DateTimeFieldRefInput<$PrismaModel>
+    gt?: Date | string | DateTimeFieldRefInput<$PrismaModel>
+    gte?: Date | string | DateTimeFieldRefInput<$PrismaModel>
+    not?: NestedDateTimeWithAggregatesFilter<$PrismaModel> | Date | string
+    _count?: NestedIntFilter<$PrismaModel>
+    _min?: NestedDateTimeFilter<$PrismaModel>
+    _max?: NestedDateTimeFilter<$PrismaModel>
   }
 
   export type NestedStringWithAggregatesFilter<$PrismaModel = never> = {

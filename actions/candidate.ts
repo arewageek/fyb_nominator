@@ -1,6 +1,7 @@
 "use server";
 import { prisma } from "@/lib/prisma";
 import { error } from "console";
+import { stringify } from "querystring";
 
 // export const prisma = new PrismaClient();
 
@@ -9,6 +10,7 @@ export interface Candidate {
   category: string;
   society: string;
   bio: string;
+  num: string;
 }
 
 export interface Response {
@@ -18,44 +20,45 @@ export interface Response {
   data?: any;
 }
 
-export const addCandidate = async ({
-  fullname,
-  category,
-  bio,
-  society,
-}: Candidate) => {
-  try {
-    await prisma.candidate.create({
-      data: {
-        fullname,
-        category,
-        bio,
-        society,
-      },
-    });
-  } catch (e: any) {
-    error;
-  }
+// export const addCandidate = async ({
+//   fullname,
+//   category,
+//   bio,
+//   society,
+// }: Candidate) => {
+//   try {
+//     await prisma.candidate.create({
+//       data: {
+//         fullname,
+//         category,
+//         bio,
+//         society,
+//       },
+//     });
+//   } catch (e: any) {
+//     error;
+//   }
 
-  const allUser = await prisma.candidate.findMany();
-  console.log("candidates", allUser);
-};
+//   const allUser = await prisma.candidate.findMany();
+//   console.log("candidates", allUser);
+// };
 
 export const addNomination = async (
   nominee: string,
-  quantity: number,
-  category: string
+  category: string,
+  quantity: string
 ) => {
   try {
-    await prisma.Nomination.create({
+    await prisma.nomination.create({
       data: {
         nominee,
-        quantity,
         category,
+        quantity,
       },
     });
     console.log("added");
-  } catch {
-    alert("unable to add nomination");
+  } catch (e: any) {
+    console.log(e.message);
   }
 };
+export const allNominations = await prisma.nomination.findMany();
