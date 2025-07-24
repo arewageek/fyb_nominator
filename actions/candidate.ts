@@ -61,4 +61,4 @@ export const addNomination = async (
     console.log(e.message);
   }
 };
-export const allNominations = await prisma.nomination.findMany();
+// export const async allNominations = await prisma.nomination.findMany();

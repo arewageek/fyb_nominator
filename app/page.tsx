@@ -46,8 +46,9 @@ interface NomineeProfile {
 export default function page() {
   // State management
   const publicKey = "pk_test_3b6e94ac5b62d8c69226a481d857d1cd089d9c67";
+  // const publicKey = "pk_live_89db03b5c537e2ad9aa8ff358a56dc7d9a95f9ec";
   const [nominee, setNominee] = useState<string>("");
-  const [email, setEmail] = useState<string>("futminnanfcs75@gmail.com");
+  const [email, setEmail] = useState<string>("");
   const [category, setCategory] = useState<string>("");
   const [amount, setAmount] = useState<number>(0);
   const [quantity, setQuantity] = useState<number>(1);
@@ -1642,12 +1643,25 @@ export default function page() {
               />
             </div>
 
+            {/* Email */}
+            <div>
+              <label className="block text-sm font-medium text-slate-700 mb-1">
+                Email
+              </label>
+              <input
+                type="email"
+                min="1"
+                onChange={(e) => setEmail(e.target.value)}
+                className="w-full px-4 py-3 rounded-lg border border-slate-200 focus:ring-2 focus:ring-blue-500 focus:border-blue-500"
+              />
+            </div>
+
             {/* Submit Button */}
             <button
               onClick={handleAddNomination}
               disabled={!nominee || !category || isAdding}
               className={`w-full py-3 px-4 rounded-md text-white font-medium transition-all ${
-                !nominee || !category
+                !nominee || !category || !email
                   ? "bg-gray-400 cursor-not-allowed"
                   : isAdding
                   ? "bg-blue-400"
