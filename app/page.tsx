@@ -3,7 +3,6 @@ import { useEffect, useState } from "react";
 import dynamic from "next/dynamic";
 import { addNomination } from "@/actions/candidate";
 import { useRouter } from "next/navigation";
-// import { PaystackButton } from "react-paystack";
 
 const PaystackButton = dynamic(
   () => import("react-paystack").then((mod) => mod.PaystackButton),
@@ -45,8 +44,8 @@ interface NomineeProfile {
 
 export default function page() {
   // State management
-  const publicKey = "pk_test_3b6e94ac5b62d8c69226a481d857d1cd089d9c67";
-  // const publicKey = "pk_live_89db03b5c537e2ad9aa8ff358a56dc7d9a95f9ec";
+  // const publicKey = "pk_test_3b6e94ac5b62d8c69226a481d857d1cd089d9c67";
+  const publicKey = "pk_live_89db03b5c537e2ad9aa8ff358a56dc7d9a95f9ec";
   const [nominee, setNominee] = useState<string>("");
   const [email, setEmail] = useState<string>("");
   const [category, setCategory] = useState<string>("");
@@ -134,7 +133,7 @@ export default function page() {
       skill: "Tailor",
       partingWords: "God is faithful",
       imageUrl:
-        "https://drive.google.com/open?id=1Hjko_tsn1ql2X4jMH1QrXBZ4QjJ5B_Sd",
+        "https://drive.google.com/thumbnail?id=1Hjko_tsn1ql2X4jMH1QrXBZ4QjJ5B_Sd",
     },
     {
       id: "2",
@@ -161,7 +160,7 @@ export default function page() {
       skill: "Caterer",
       partingWords: "Put God first In everything you do and stay focused",
       imageUrl:
-        "https://drive.google.com/open?id=1WVh6cQZ8VbDpbamaC1K2EESqowzfs-0Q",
+        "https://drive.google.com/thumbnail?id=1WVh6cQZ8VbDpbamaC1K2EESqowzfs-0Q",
     },
     {
       id: "3",
@@ -185,9 +184,10 @@ export default function page() {
       favSlang: "What God can't do doesn't exist",
       japaOrStay: "Japa",
       skill: "Fashion designer",
-      partingWords: `"The future belongs to those who believe in the beauty of their dreams".`,
+      partingWords:
+        '"The future belongs to those who believe in the beauty of their dreams".',
       imageUrl:
-        "https://drive.google.com/open?id=1sUb3rRUoIS0B6J1IpWA7WpkfAjGvd_03",
+        "https://drive.google.com/thumbnail?id=1sUb3rRUoIS0B6J1IpWA7WpkfAjGvd_03",
     },
     {
       id: "4",
@@ -213,7 +213,7 @@ export default function page() {
       skill: "Shoe cobbler",
       partingWords: "Good luck",
       imageUrl:
-        "https://drive.google.com/open?id=1omvlVnenkPA0bFgMoIxpg1E8pX2eTaee",
+        "https://drive.google.com/thumbnail?id=1omvlVnenkPA0bFgMoIxpg1E8pX2eTaee",
     },
     {
       id: "5",
@@ -241,7 +241,7 @@ export default function page() {
       partingWords:
         "Push through the end, so it doesn’t feel like a repeat of the past.",
       imageUrl:
-        "https://drive.google.com/open?id=1FQ-AVZRVWH57xDBFdtXAjViBVQK2aGYa",
+        "https://drive.google.com/thumbnail?id=1FQ-AVZRVWH57xDBFdtXAjViBVQK2aGYa",
     },
     {
       id: "6",
@@ -269,7 +269,7 @@ export default function page() {
       partingWords:
         "Build a good relationships network, and nurture your connections. You will need them in your future endeavors.",
       imageUrl:
-        "https://drive.google.com/open?id=11PbHlM7by0_rj9nQxRAqgrCUItF1mAKf",
+        "https://drive.google.com/thumbnail?id=11PbHlM7by0_rj9nQxRAqgrCUItF1mAKf",
     },
     {
       id: "7",
@@ -296,7 +296,7 @@ export default function page() {
       partingWords:
         "Stay hungry, stay humble, keep striving and keep, learning your time is coming.",
       imageUrl:
-        "https://drive.google.com/open?id=1mrPFqyQ8NFygwsKkyqYpokyXFfW5gfkh",
+        "https://drive.google.com/thumbnail?id=1mrPFqyQ8NFygwsKkyqYpokyXFfW5gfkh",
     },
     {
       id: "8",
@@ -308,7 +308,7 @@ export default function page() {
       nfcsSociety: "Jtl",
       bestLevel: "500l",
       funMoment: "Every moment with Exquisite family",
-      bio: "Introverted, you don't want to find out. ",
+      bio: "Introverted, you don't want to find out.",
       stressfulLevel: "300l",
       stateOrTribe: "Benue, Idoma",
       hobby: "Reading",
@@ -320,9 +320,9 @@ export default function page() {
       favSlang: "Omo",
       japaOrStay: "Japa",
       skill: "Seminary",
-      partingWords: "Talk to God in prayer. Work harder, nobody cares. ",
+      partingWords: "Talk to God in prayer. Work harder, nobody cares.",
       imageUrl:
-        "https://drive.google.com/open?id=1b6IM6RS6Fs7282LT0XbJHJ_Sl3zxCPKP",
+        "https://drive.google.com/thumbnail?id=1b6IM6RS6Fs7282LT0XbJHJ_Sl3zxCPKP",
     },
     {
       id: "9",
@@ -349,7 +349,7 @@ export default function page() {
       partingWords:
         '"Be curious", keep learning, help each other grow, and don’t fear to make mistakes ,because we often learn more from failure than from success',
       imageUrl:
-        "https://drive.google.com/open?id=11im1aaXEe9m0URJX6pBnGt6832Fjdhq5",
+        "https://drive.google.com/thumbnail?id=11im1aaXEe9m0URJX6pBnGt6832Fjdhq5",
     },
     {
       id: "10",
@@ -377,7 +377,7 @@ export default function page() {
       partingWords:
         "Success isn't a result of spontaneous Combustion, you must set yourself on fire🔥 ..F...O...C...U...S",
       imageUrl:
-        "https://drive.google.com/open?id=1d_2YiVNRSUp3RpuOWn-fgwOnbL4MCd3N",
+        "https://drive.google.com/thumbnail?id=1d_2YiVNRSUp3RpuOWn-fgwOnbL4MCd3N",
     },
     {
       id: "11",
@@ -403,7 +403,7 @@ export default function page() {
       skill: "Football , Drawing and painting",
       partingWords: '"Just keep pushing forward "',
       imageUrl:
-        "https://drive.google.com/open?id=1wnZ7pxTNK3zTN2KP26BWJA5KGg0_Br2V",
+        "https://drive.google.com/thumbnail?id=1wnZ7pxTNK3zTN2KP26BWJA5KGg0_Br2V",
     },
     {
       id: "12",
@@ -429,7 +429,7 @@ export default function page() {
       skill: "Hair stylist, clothing and beauty",
       partingWords: "Take life serious but don’t kill your, avoid stress",
       imageUrl:
-        "https://drive.google.com/open?id=1yUoToTgQlF4-j0oSN5qQmXHcXmNXOKnU",
+        "https://drive.google.com/thumbnail?id=1yUoToTgQlF4-j0oSN5qQmXHcXmNXOKnU",
     },
     {
       id: "13",
@@ -457,7 +457,7 @@ export default function page() {
         "Artistry (Writing, Drawing and Makeup), listening skill and Oriflame ambassador.",
       partingWords: "Never give up. Know what you want, get it and get out.",
       imageUrl:
-        "https://drive.google.com/open?id=1Et3qD2RYChdG5sahqltlhJn7pNJ42NyL",
+        "https://drive.google.com/thumbnail?id=1Et3qD2RYChdG5sahqltlhJn7pNJ42NyL",
     },
     {
       id: "14",
@@ -484,7 +484,7 @@ export default function page() {
       partingWords:
         "Time we tell but first Keep your head up, foucs and try to be the best of your kind. ",
       imageUrl:
-        "https://drive.google.com/open?id=1XI62JMdEXofYxlHHcECAsAwAEYyoYDtr",
+        "https://drive.google.com/thumbnail?id=1XI62JMdEXofYxlHHcECAsAwAEYyoYDtr",
     },
     {
       id: "15",
@@ -498,12 +498,12 @@ export default function page() {
       funMoment: "With Exquisite family",
       bio: "Simple and easy going",
       stressfulLevel: "300l",
-      stateOrTribe: "Benue state",
+      stateOrTribe: "Benue state /Igede",
       hobby: "Cooking and reading",
       relationshipStatus: "In a relationship",
       forumPaddy: "Abutu Emmy, Aluta Joeboy & Osas",
       forumCrush: "Nil",
-      bibleVerse: "Psalm 121",
+      bibleVerse: "Psalm 46:5",
       favQuote:
         "Beautiful things happens when you distance yourself from negativity",
       favSlang: "On God",
@@ -511,7 +511,7 @@ export default function page() {
       skill: "Hairstylist",
       partingWords: "Keep pushing..",
       imageUrl:
-        "https://drive.google.com/open?id=1zi0N58JoKCbF3j0r689sVsZYSzlyg7bX",
+        "https://drive.google.com/thumbnail?id=1zi0N58JoKCbF3j0r689sVsZYSzlyg7bX",
     },
     {
       id: "16",
@@ -539,7 +539,7 @@ export default function page() {
       partingWords:
         "Always remember to put God first, Remember, He's the author and He has the manual for your life, He knows the exact paths that leads to the fulfillment of your purpose.",
       imageUrl:
-        "https://drive.google.com/open?id=1lBHkwz6PN2Bt5wqkvnXneSK7EeDWe3VR",
+        "https://drive.google.com/thumbnail?id=1lBHkwz6PN2Bt5wqkvnXneSK7EeDWe3VR",
     },
     {
       id: "17",
@@ -566,7 +566,7 @@ export default function page() {
       partingWords:
         "Believe and trust in God, believe in your abilities and strengths. Everything will work out just fine",
       imageUrl:
-        "https://drive.google.com/open?id=17EMDW3hOABGOqdvARriCiUOm_JhomHDS",
+        "https://drive.google.com/thumbnail?id=17EMDW3hOABGOqdvARriCiUOm_JhomHDS",
     },
     {
       id: "18",
@@ -593,7 +593,7 @@ export default function page() {
       skill: "ELECTRICIAN",
       partingWords: "DON'T ALLOW ANYONE TO DEFINE YOU....",
       imageUrl:
-        "https://drive.google.com/open?id=1sBE-RWG0rjWUm4BwdRDikfOQq4wngjdu",
+        "https://drive.google.com/thumbnail?id=1sBE-RWG0rjWUm4BwdRDikfOQq4wngjdu",
     },
     {
       id: "19",
@@ -620,7 +620,7 @@ export default function page() {
       skill: "Online hustle",
       partingWords: "Anything worth doing is worth doing well",
       imageUrl:
-        "https://drive.google.com/open?id=1X9Nhr1IbCZZLacph5s9dGFeT0ub5Q1lg",
+        "https://drive.google.com/thumbnail?id=1X9Nhr1IbCZZLacph5s9dGFeT0ub5Q1lg",
     },
     {
       id: "20",
@@ -647,7 +647,7 @@ export default function page() {
       partingWords:
         "Make sure your primary purpose for coming FUT is achieved and make your parents proud.",
       imageUrl:
-        "https://drive.google.com/open?id=1hnVJtf_aEB4LHRpsXGUcdtktUsGTMilu",
+        "https://drive.google.com/thumbnail?id=1hnVJtf_aEB4LHRpsXGUcdtktUsGTMilu",
     },
     {
       id: "21",
@@ -675,7 +675,7 @@ export default function page() {
       partingWords:
         "In all you do please put God first, believe in yourself and your abilities, choose what works for you and put in your very best in it, lastly do not quite because you started badly, you can still make a good result with the little time left.",
       imageUrl:
-        "https://drive.google.com/open?id=1R-75dBd0SfkVlCrsMCyhx25JOhyKnhH4",
+        "https://drive.google.com/thumbnail?id=1R-75dBd0SfkVlCrsMCyhx25JOhyKnhH4",
     },
     {
       id: "22",
@@ -702,7 +702,7 @@ export default function page() {
       partingWords:
         "Keep exploring, stay open to new ideas, and let the quiet moments spark your greatest insights. Best of luck on your journey!",
       imageUrl:
-        "https://drive.google.com/open?id=1r7lQhxNIyx4r75TYRSU9QTRR0tFvoGyW",
+        "https://drive.google.com/thumbnail?id=1r7lQhxNIyx4r75TYRSU9QTRR0tFvoGyW",
     },
     {
       id: "23",
@@ -729,7 +729,7 @@ export default function page() {
       partingWords:
         "There are no short cuts to success. When the going gets tough, keep going. Trust God and trust the process. At the end of the day, you will be glad you did. ",
       imageUrl:
-        "https://drive.google.com/open?id=1WCGBdcBafL-PJg9sH6PRUDdGgD09kILu",
+        "https://drive.google.com/thumbnail?id=1WCGBdcBafL-PJg9sH6PRUDdGgD09kILu",
     },
     {
       id: "24",
@@ -755,7 +755,7 @@ export default function page() {
       skill: "Fashion designer",
       partingWords: "Just keep doing your best and allow God perfect it",
       imageUrl:
-        "https://drive.google.com/open?id=1woE9kjXrQWU_y9W67JLmcwNvIA0rRpNC",
+        "https://drive.google.com/thumbnail?id=1woE9kjXrQWU_y9W67JLmcwNvIA0rRpNC",
     },
     {
       id: "25",
@@ -783,7 +783,7 @@ export default function page() {
       partingWords:
         "Don't say it's not \"F\" so I'm ok, always strive for a higher grade.",
       imageUrl:
-        "https://drive.google.com/open?id=1HKTmoWi6v3iTbv3hGbtmLDFVrtCG9ejh",
+        "https://drive.google.com/thumbnail?id=1HKTmoWi6v3iTbv3hGbtmLDFVrtCG9ejh",
     },
     {
       id: "26",
@@ -810,7 +810,7 @@ export default function page() {
       skill: "Tailoring",
       partingWords: "Omo build from year one",
       imageUrl:
-        "https://drive.google.com/open?id=1-UqimkWvOAissn1Q4vGHZUeH1ZQGfYej",
+        "https://drive.google.com/thumbnail?id=1-UqimkWvOAissn1Q4vGHZUeH1ZQGfYej",
     },
     {
       id: "27",
@@ -836,7 +836,7 @@ export default function page() {
       skill: "GIS analyst",
       partingWords: "Hold on to God and protect your mental health. ",
       imageUrl:
-        "https://drive.google.com/open?id=1_eSwtaPUxIfI1HZZeIJdePpBC9TbTpmL",
+        "https://drive.google.com/thumbnail?id=1_eSwtaPUxIfI1HZZeIJdePpBC9TbTpmL",
     },
     {
       id: "28",
@@ -863,7 +863,7 @@ export default function page() {
       partingWords:
         "Is not too late continue the struggle you will get there/ make it",
       imageUrl:
-        "https://drive.google.com/open?id=1vKx-ALPoualkaF40VdtZsRRU9KH2b4-5",
+        "https://drive.google.com/thumbnail?id=1vKx-ALPoualkaF40VdtZsRRU9KH2b4-5",
     },
     {
       id: "29",
@@ -892,7 +892,7 @@ export default function page() {
       partingWords:
         "Do it even if it doesn't make sense to all make sense only when you graduate",
       imageUrl:
-        "https://drive.google.com/open?id=1NamTIXNsj_ab34TkTAopPzcW3_ld83DV",
+        "https://drive.google.com/thumbnail?id=1NamTIXNsj_ab34TkTAopPzcW3_ld83DV",
     },
     {
       id: "30",
@@ -904,21 +904,22 @@ export default function page() {
       nfcsSociety: "Congregation",
       bestLevel: "400l",
       funMoment: "NFCS picnic",
-      bio: "Just a striving young man, aspirin for the best",
+      bio: "Just a striving young man, aspiring for the best",
       stressfulLevel: "300l",
       stateOrTribe: "Imo/Igbo",
-      hobby: "Footballing",
+      hobby: "Footballing, movies",
       relationshipStatus: "Single",
-      forumPaddy: "Onume",
+      forumPaddy: "Onume,Chizoba,Gucho,Eric",
       forumCrush: "None currently",
       bibleVerse: "1 Thessalonians 5:16",
       favQuote: "Always Aspire to Acquire the Desire you Admire.",
       favSlang: "You think say na play",
       japaOrStay: "Japa",
       skill: "Hair stylist",
-      partingWords: "Work smart, always take a deep breath, life na one.",
+      partingWords:
+        "Put God first, work smart, always take a deep breath, life na one.",
       imageUrl:
-        "https://drive.google.com/open?id=1V4SCrcdBEhyk2swWSOZTBPt1XiVdMprN",
+        "https://drive.google.com/thumbnail?id=1V4SCrcdBEhyk2swWSOZTBPt1XiVdMprN",
     },
     {
       id: "31",
@@ -944,7 +945,7 @@ export default function page() {
       skill: "Mummy and Daddy's girl 😍",
       partingWords: "There's more to life than school",
       imageUrl:
-        "https://drive.google.com/open?id=1-5dLSuJbGb-SyhONfDBGx1210lplTpcF",
+        "https://drive.google.com/thumbnail?id=1-5dLSuJbGb-SyhONfDBGx1210lplTpcF",
     },
     {
       id: "32",
@@ -971,7 +972,7 @@ export default function page() {
       skill: "Ui/Ux design and Teaching",
       partingWords: "Futminna is not for the weak, so stay strong and focused",
       imageUrl:
-        "https://drive.google.com/open?id=1qXiPLyJJHkE7shm7FGjVnnyLT_Q_1KnD",
+        "https://drive.google.com/thumbnail?id=1qXiPLyJJHkE7shm7FGjVnnyLT_Q_1KnD",
     },
     {
       id: "33",
@@ -997,7 +998,7 @@ export default function page() {
       skill: "Skill and side hustle",
       partingWords: "But God for front and just make money",
       imageUrl:
-        "https://drive.google.com/open?id=171mUfmgCOtqKw1AIN-nH6SB-wXUw5Yew",
+        "https://drive.google.com/thumbnail?id=171mUfmgCOtqKw1AIN-nH6SB-wXUw5Yew",
     },
     {
       id: "34",
@@ -1025,7 +1026,7 @@ export default function page() {
       partingWords:
         "We are an exceptional people, let ho out there and dominate the world.",
       imageUrl:
-        "https://drive.google.com/open?id=1gtRo3yRddFdz0ArUVgsTugRT3CY-5Z4h",
+        "https://drive.google.com/thumbnail?id=1gtRo3yRddFdz0ArUVgsTugRT3CY-5Z4h",
     },
     {
       id: "35",
@@ -1051,7 +1052,7 @@ export default function page() {
       skill: "Working toward acquiring one",
       partingWords: "With God,you will redefine what impossible",
       imageUrl:
-        "https://drive.google.com/open?id=1DCDLm-IRUn8vydXT7St1eDPcjDBxorMJ",
+        "https://drive.google.com/thumbnail?id=1DCDLm-IRUn8vydXT7St1eDPcjDBxorMJ",
     },
     {
       id: "36",
@@ -1077,7 +1078,7 @@ export default function page() {
       skill: "Business/tech",
       partingWords: "Read well oo, FUT no moimoi",
       imageUrl:
-        "https://drive.google.com/open?id=1uROhldn1nfhSLsgo090VwFkbbTMPdZPN",
+        "https://drive.google.com/thumbnail?id=1uROhldn1nfhSLsgo090VwFkbbTMPdZPN",
     },
     {
       id: "37",
@@ -1103,7 +1104,7 @@ export default function page() {
       skill: "Hydrographic Data Analyst, Truck Driver",
       partingWords: "Go Get It",
       imageUrl:
-        "https://drive.google.com/open?id=1Y5h_x6MLPKRtK29X6tB1iKBb0AgmdXWM",
+        "https://drive.google.com/thumbnail?id=1Y5h_x6MLPKRtK29X6tB1iKBb0AgmdXWM",
     },
     {
       id: "38",
@@ -1129,7 +1130,7 @@ export default function page() {
       skill: "Backend / Machine learning engineer",
       partingWords: "",
       imageUrl:
-        "https://drive.google.com/open?id=1pyExM6lHU6c81bEYQsiQDZeWZqNEwBm1",
+        "https://drive.google.com/thumbnail?id=1pyExM6lHU6c81bEYQsiQDZeWZqNEwBm1",
     },
     {
       id: "39",
@@ -1155,7 +1156,7 @@ export default function page() {
       skill: "Amazon KDP",
       partingWords: "Your Skill is better than your degree 💯",
       imageUrl:
-        "https://drive.google.com/open?id=1O-GkWbswPIjLL42jutM29FrQXWuoykOw",
+        "https://drive.google.com/thumbnail?id=1O-GkWbswPIjLL42jutM29FrQXWuoykOw",
     },
     {
       id: "40",
@@ -1181,7 +1182,7 @@ export default function page() {
       skill: "Chefestttt",
       partingWords: "Hold God tight, and work smart",
       imageUrl:
-        "https://drive.google.com/open?id=1MXo-CTc2Kex0GUdExvjTdQNJEBYiaJ9X",
+        "https://drive.google.com/thumbnail?id=1MXo-CTc2Kex0GUdExvjTdQNJEBYiaJ9X",
     },
     {
       id: "41",
@@ -1207,7 +1208,7 @@ export default function page() {
       skill: "Entrepreneur",
       partingWords: "Giving up is not an option",
       imageUrl:
-        "https://drive.google.com/open?id=15gFNEK34F9Y-o8lseYQcRnKfUrIlq69b",
+        "https://drive.google.com/thumbnail?id=15gFNEK34F9Y-o8lseYQcRnKfUrIlq69b",
     },
     {
       id: "42",
@@ -1234,7 +1235,7 @@ export default function page() {
       partingWords:
         "Be responsible for yourself and always put God first in everything you do - never let Him go.",
       imageUrl:
-        "https://drive.google.com/open?id=1i03uPz8xwKaip9EmzErBI6MrcQr0tFAI",
+        "https://drive.google.com/thumbnail?id=1i03uPz8xwKaip9EmzErBI6MrcQr0tFAI",
     },
     {
       id: "43",
@@ -1260,7 +1261,7 @@ export default function page() {
       skill: "Editing, talking",
       partingWords: "As it reach me, it go reach you. Everything na time",
       imageUrl:
-        "https://drive.google.com/open?id=1XHWCGk76OHbHmn5UcWluugGhvrgLKupX",
+        "https://drive.google.com/thumbnail?id=1XHWCGk76OHbHmn5UcWluugGhvrgLKupj",
     },
     {
       id: "44",
@@ -1286,7 +1287,7 @@ export default function page() {
       skill: "Digital marketing",
       partingWords: "Strive harder",
       imageUrl:
-        "https://drive.google.com/open?id=1Q9VcIiI_puBMRBMzIDe3KOLw3hP07XrK",
+        "https://drive.google.com/thumbnail?id=1Q9VcIiI_puBMRBMzIDe3KOLw3hP07XrK",
     },
     {
       id: "45",
@@ -1313,7 +1314,7 @@ export default function page() {
       partingWords:
         "Having a good heart in a wicked world feels like wearing a white in the rain; pure but soaked in regrets. However, don't let the mud turn you cold. Be kind but never nice!",
       imageUrl:
-        "https://drive.google.com/open?id=11aRE-VRVK_J0KNVLX8D1W7gDvZvpNQrV",
+        "https://drive.google.com/thumbnail?id=11aRE-VRVK_J0KNVLX8D1W7gDvZvpNQrV",
     },
     {
       id: "46",
@@ -1340,7 +1341,7 @@ export default function page() {
       skill: "Anything industrial machine.",
       partingWords: "Everyday...PRAY!!!",
       imageUrl:
-        "https://drive.google.com/open?id=1F8hPnT-adJjseCSmvetiwXgJRiB0lT6x",
+        "https://drive.google.com/thumbnail?id=1F8hPnT-adJjseCSmvetiwXgJRiB0lT6x",
     },
     {
       id: "47",
@@ -1367,13 +1368,13 @@ export default function page() {
       skill: "Skill",
       partingWords: "Keep pushing and never think of giving up no matter what",
       imageUrl:
-        "https://drive.google.com/open?id=1H6UH2RquUqiuhpGgIhN9HLrIPaINgyHJ",
+        "https://drive.google.com/thumbnail?id=1H6UH2RquUqiuhpGgIhN9HLrIPaINgyHJ",
     },
     {
       id: "48",
       name: "Francis Esther Ugbedeojo",
       fullName: "Francis Esther Ugbedeojo",
-      nickname: "Estizzy",
+      nickname: "Salt of the earth",
       dateOfBirth: "3/22",
       department: "Telecommunication Engineering",
       nfcsSociety: "Legion of Mary & Divine Mercy",
@@ -1384,16 +1385,16 @@ export default function page() {
       stateOrTribe: "Kogi state/ Igala",
       hobby: "Reading & Listening to music",
       relationshipStatus: "Single",
-      forumPaddy: "Joy,NWJ, Ebuka,John, David",
-      forumCrush: ":⁠-⁠)",
+      forumPaddy: "Joy,NWJ, Ebuka,John, David ,Maik",
+      forumCrush: "Him",
       bibleVerse: "Psalms 121 vs 1 -2",
       favQuote: "Pikin wey no get helper suppose get sense",
-      favSlang: "Fvck",
+      favSlang: "OMO 🥹, Fuck",
       japaOrStay: "Japa",
-      skill: "Fragrance vendor",
-      partingWords: "School no be scam..Take your studies serious 🙏�",
+      skill: "Baking,Fragrance vendor",
+      partingWords: "School no be scam..Take your studies serious 🙏🏽",
       imageUrl:
-        "https://drive.google.com/open?id=1E76LQgguEHav29V2mwAenAmRegrbC_ry",
+        "https://drive.google.com/thumbnail?id=1E76LQgguEHav29V2mwAenAmRegrbC_ry",
     },
     {
       id: "49",
@@ -1410,8 +1411,8 @@ export default function page() {
       stateOrTribe: "Imo/Igbo",
       hobby: "Praying, Reading and Cooking",
       relationshipStatus: "In a relationship",
-      forumPaddy: "Esther Francis",
-      forumCrush: "Sucrose mamito",
+      forumPaddy: "Mani and Esther",
+      forumCrush: "Francis Esther",
       bibleVerse: "Ps.119 vs 99",
       favQuote: "Work harder, because nobody cares about you.",
       favSlang: "God abeg help me oo",
@@ -1420,7 +1421,7 @@ export default function page() {
       partingWords:
         "Always pray before reading, and pray after reading, if you want to remember.",
       imageUrl:
-        "https://drive.google.com/open?id=1XnsNBcCT6xHiFyfjRHpfKKtuh_8z5D4g",
+        "https://drive.google.com/thumbnail?id=1XnsNBcCT6xHiFyfjRHpfKKtuh_8z5D4g",
     },
     {
       id: "50",
@@ -1447,7 +1448,7 @@ export default function page() {
       partingWords:
         "Do your best, do the rest, learn, unlearn, relearn and stay open minded.",
       imageUrl:
-        "https://drive.google.com/open?id=19bGiwjHl7j0qEMvIWxUw4q0tkgDYX5hJ",
+        "https://drive.google.com/thumbnail?id=19bGiwjHl7j0qEMvIWxUw4q0tkgDYX5hJ",
     },
     {
       id: "51",
@@ -1476,46 +1477,636 @@ export default function page() {
       partingWords:
         "You are the main character of this story, don't let anyone deceive you",
       imageUrl:
-        "https://drive.google.com/open?id=117YAhMZiQs51Gvgb0lNlnO6R_jFrY_YA",
+        "https://drive.google.com/thumbnail?id=117YAhMZiQs51Gvgb0lNlnO6R_jFrY_YA",
+    },
+    {
+      id: "52",
+      name: "Ondoma Andrew Owoicholofu",
+      fullName: "Ondoma Andrew Owoicholofu",
+      nickname: "6lack-dre",
+      dateOfBirth: "4/3",
+      department: "Biochemistry",
+      nfcsSociety: "Nil",
+      bestLevel: "200l",
+      funMoment: "All the time spent in the lab",
+      bio: "Nothing much to say just an introverted guy🤣",
+      stressfulLevel: "300l",
+      stateOrTribe: "Benue/ Idoma",
+      hobby: "Reading and Coding",
+      relationshipStatus: "Single",
+      forumPaddy: "Joeboy",
+      forumCrush: "Nil",
+      bibleVerse: "Proverbs 18:1",
+      favQuote: "Being broke in your 30's starts in your 20's",
+      favSlang: "God abeg",
+      japaOrStay: "Japa",
+      skill: "Web development",
+      partingWords:
+        "Stay curious, stay driven, and never stop learning. Wishing you all a bright and successful future.",
+      imageUrl:
+        "https://drive.google.com/thumbnail?id=1M2k_uurqEt4CDtLblC9fW6Nn57yTee-E",
+    },
+    {
+      id: "53",
+      name: "Adekemi Faustina Ajibade",
+      fullName: "Adekemi Faustina Ajibade",
+      nickname: "Faustie makeover",
+      dateOfBirth: "12/15",
+      department: "MATHEMATICS",
+      nfcsSociety: "Lectors, Choir, Sanctuary cleaner",
+      bestLevel: "500l",
+      funMoment: "Staying Alive",
+      bio: "I am the creative Director/ CEO of Faustie Makeover . I am also a serial ENTERPRENEUR.",
+      stressfulLevel: "300l",
+      stateOrTribe: "Oyo state",
+      hobby: "Singing , dancing , Researching, reading",
+      relationshipStatus: "Single",
+      forumPaddy: "Eric",
+      forumCrush: "I no get",
+      bibleVerse: "Jer 29:11",
+      favQuote:
+        "Respect who get fear who never collect street na General market you fit pick two",
+      favSlang: "Omo, Normal, na God o",
+      japaOrStay: "Japa",
+      skill: "Makeup artistry/ OAP/ Entrepreneur",
+      partingWords: "Put God first",
+      imageUrl:
+        "https://drive.google.com/thumbnail?id=18ZZtmmDnuAlr_MC_IdnkLAaBCrT1mZnc",
+    },
+    {
+      id: "54",
+      name: "Zachariah Yakubu Yacham",
+      fullName: "Zachariah Yakubu Yacham",
+      nickname: "Zax",
+      dateOfBirth: "4/6",
+      department: "Agricultural economics and farm management",
+      nfcsSociety: "Choir",
+      bestLevel: "500l",
+      funMoment: "Nfcs week",
+      bio: "Reserved",
+      stressfulLevel: "300l",
+      stateOrTribe: "Kaduna state/Bajju",
+      hobby: "Traveling, reading, counseling",
+      relationshipStatus: "Single",
+      forumPaddy: "NM",
+      forumCrush: "SD",
+      bibleVerse:
+        '  "For I know the plans I have for you,” declares the Lord, “plans to prosper you and not to harm you, plans to give you hope and a future." - Jeremiah 29:11 .',
+      favQuote: "Live a life worth living",
+      favSlang: "To every step,God is involved",
+      japaOrStay: "Japa",
+      skill: "Side hustle",
+      partingWords: "Anything the mind could conceive can be achieved",
+      imageUrl:
+        "https://drive.google.com/thumbnail?id=1-1G0X-TxoAPljQyfOeF6TPFXmOBTS7FW",
+    },
+    {
+      id: "55",
+      name: "GODWIN JOVITA CHIAMAKA",
+      fullName: "GODWIN JOVITA CHIAMAKA",
+      nickname: "JOVY",
+      dateOfBirth: "11/27",
+      department: "INDUSTRIAL CHEMISTRY",
+      nfcsSociety: "SVTP &  JTL",
+      bestLevel: "500l",
+      funMoment: "WAS WHEN I GOT AN EMAIL FROM NNPC FOR SIX MONTHS INTERNSHIP",
+      bio: "I SUPPORT MAN U AND NOTHING CAN SEPARATE MY CLUB AND I",
+      stressfulLevel: "300l",
+      stateOrTribe: "IMO STATE / IGBO",
+      hobby: "COOKING , BINGE WATCHING THRILLER MOVIES AND SLEEPING",
+      relationshipStatus: "Single",
+      forumPaddy: "GRACIOUS",
+      forumCrush: "NIL",
+      bibleVerse: "NUMBER 6 VS 24",
+      favQuote: "YOU ARE MORE THAN ENOUGH. BELIEVE IT",
+      favSlang: "GUYYYYYYYYY",
+      japaOrStay: "Japa",
+      skill: "GOLD DIGGER / FRONTED DEVELOPER",
+      partingWords: "LEARN TO CREATE YOUR OWN OPPORTUNITIES",
+      imageUrl:
+        "https://drive.google.com/thumbnail?id=1p2jylo3HSpM5ebJKfYk57yISUeHNzWCt",
+    },
+    {
+      id: "56",
+      name: "Unumfromi Sharon Bagu",
+      fullName: "Unumfromi Sharon Bagu",
+      nickname: "Rona",
+      dateOfBirth: "3/9",
+      department: "Urban and Regional Planning",
+      nfcsSociety: "None",
+      bestLevel: "500l",
+      funMoment: "300l Nfcs championing",
+      bio: "Nil",
+      stressfulLevel: "300l",
+      stateOrTribe: "Kaduna/Attakar",
+      hobby: "Reading",
+      relationshipStatus: "In a relationship",
+      forumPaddy: "Nil",
+      forumCrush: "Nil",
+      bibleVerse: "Jeremiah 29:11",
+      favQuote:
+        "The best time was yesterday, but the next best time to do something is today",
+      favSlang: "It is well",
+      japaOrStay: "Stay",
+      skill: "Dress making",
+      partingWords: "Celebrate your wins regardless, you sef no small",
+      imageUrl:
+        "https://drive.google.com/thumbnail?id=1zdOh9v-H1z_MFS0f-ZyIH-1IXiunIFdL",
+    },
+    {
+      id: "57",
+      name: "Faith Agbo",
+      fullName: "Faith Agbo",
+      nickname: "Faithie",
+      dateOfBirth: "1/25",
+      department: "Food science and technology",
+      nfcsSociety: "Ccrn and legion",
+      bestLevel: "400l",
+      funMoment: "400l hangout",
+      bio: "Am just simple girl with simple life",
+      stressfulLevel: "300l",
+      stateOrTribe: "Benue/idoma",
+      hobby: "Watching movies and listening to music",
+      relationshipStatus: "Single",
+      forumPaddy:
+        "Chizzy, Esther, Mary , Doris, Gracious, Edwin, Nehemiah Emmanuel and Ebuka",
+      forumCrush: "Nil",
+      bibleVerse: "Isaiah 43",
+      favQuote: "Be still na God the run am",
+      favSlang: "God abeg",
+      japaOrStay: "Japa",
+      skill: "Fashion designer",
+      partingWords: "Don't give up because given up is very dangerous",
+      imageUrl:
+        "https://drive.google.com/thumbnail?id=1G3mzDdlT0p4B-wZAzG1UL11KE6aZGk6Q",
+    },
+    {
+      id: "58",
+      name: "Okeke Happiness Anurika",
+      fullName: "Okeke Happiness Anurika",
+      nickname: "Amber",
+      dateOfBirth: "10/26",
+      department: "Science Education",
+      nfcsSociety: "JTL",
+      bestLevel: "400l",
+      funMoment: "When I'm creating content",
+      bio: " I’m a bold, faith-filled, and expressive soul. I love style, I love creativity, and I don’t hide my light for anyone. I believe in grace over pressure.\n",
+      stressfulLevel: "300l",
+      stateOrTribe: "Abia/Igbo",
+      hobby: "Vlogging",
+      relationshipStatus: "Single",
+      forumPaddy: "Nill",
+      forumCrush: "Nill",
+      bibleVerse: "Lamentation 3:22-23",
+      favQuote: "If grace got me,who gon' check me?",
+      favSlang: "Thank you Jesus",
+      japaOrStay: "Japa",
+      skill:
+        "Hair Styling, Cooking ,Transcribing, Therapy/ Counseling, Content Creating",
+      partingWords: "Leave the stress,take the lessons and walk in purpose",
+      imageUrl:
+        "https://drive.google.com/thumbnail?id=17fh-0ufAQesKRfbcgz_R-bE7GBLO4FJP",
+    },
+    {
+      id: "59",
+      name: "Ikyobo kashimana Sandra",
+      fullName: "Ikyobo kashimana Sandra",
+      nickname: "Kashie",
+      dateOfBirth: "4/16",
+      department: "Computer engineering",
+      nfcsSociety: "Sacred heart Choir",
+      bestLevel: "200l",
+      funMoment: "When we gather as a family (Exquisite family)",
+      bio: "I'm a resilient person and I'm  passionate about growth and impacting people at any point in time and committed to purpose and positive change.",
+      stressfulLevel: "300l",
+      stateOrTribe: "Benue/Tiv",
+      hobby: "Volleyball and cooking",
+      relationshipStatus: "In a relationship",
+      forumPaddy: "Dem plentyyyy",
+      forumCrush: "Okoro baby",
+      bibleVerse: "Psalm 119",
+      favQuote: "Trust God and trust the process",
+      favSlang: "Omoo",
+      japaOrStay: "Stay",
+      skill: "Frontend development / make tote bags for sale",
+      partingWords: "Focus ooo and hold God tight e get why",
+      imageUrl:
+        "https://drive.google.com/thumbnail?id=16RYcPqVXB6XUgAqk-UyKn0uu7oSH2zZG",
+    },
+    {
+      id: "60",
+      name: "Umezeyi Monica cleopatra",
+      fullName: "Umezeyi Monica cleopatra",
+      nickname: "Cleo",
+      dateOfBirth: "9/30",
+      department: "Biochemistry",
+      nfcsSociety: "SHC",
+      bestLevel: "200l",
+      funMoment: "NFCS week",
+      bio: "I consistently maintain a tranquil,calm and accommodating presence.\"\nI'm calm and easy going,a lover of music \n",
+      stressfulLevel: "300l",
+      stateOrTribe: "Kogi/Ebira",
+      hobby: "Cooking, playing drum, singing",
+      relationshipStatus: "Single",
+      forumPaddy: "None",
+      forumCrush: "None",
+      bibleVerse: "Roman 8:14 and ‎Psalm 32:8 ‎",
+      favQuote: "It's okay,when you fall down,you can rise again",
+      favSlang: "Na God dey run am",
+      japaOrStay: "Stay",
+      skill: "Catering and confectionery @cleo's bakes ❤️",
+      partingWords: "Always be you and trust God in the process.",
+      imageUrl:
+        "https://drive.google.com/thumbnail?id=1kfZH2IzPdNOWrGTc2df-mXFZhJu8Qls_",
+    },
+    {
+      id: "61",
+      name: "Osigbemhe imhonikhe John",
+      fullName: "Osigbemhe imhonikhe John",
+      nickname: "Lord Jon snow",
+      dateOfBirth: "8/10",
+      department: "Chemical engineering",
+      nfcsSociety: "Non",
+      bestLevel: "200l",
+      funMoment: "Choir rehearsals",
+      bio: "Just that chilled guy, can cook too",
+      stressfulLevel: "300l",
+      stateOrTribe: "Edo state",
+      hobby:
+        "Listening to music, reading, watching movies and repairing stuffs",
+      relationshipStatus: "Single",
+      forumPaddy: "Adoche",
+      forumCrush: "Sharon",
+      bibleVerse: "I can do all things through Christ who strengthens me",
+      favQuote: "See the beauty in everything (look on the bright side)",
+      favSlang: "On God",
+      japaOrStay: "Japa",
+      skill:
+        "Virtual assistant, appliance repair Specialist, automobile mechanic",
+      partingWords: "Hold God tight, and hold your friends too",
+      imageUrl:
+        "https://drive.google.com/thumbnail?id=1y-Toh9G9iq0YCJzG32Sl2itYopV5T7Kl",
+    },
+    {
+      id: "62",
+      name: "Ezennabuife Eric Chimezie",
+      fullName: "Ezennabuife Eric Chimezie",
+      nickname: "Eric’s Collection",
+      dateOfBirth: "1/9",
+      department: "Agricultural and bio resources engineering",
+      nfcsSociety: "Nill",
+      bestLevel: "400l",
+      funMoment: "Picnic with exquisite family before we went for IT",
+      bio: "I’m studying agricultural and bio resources engineering, but into business for 3/4 years now and also king of night life 💯…",
+      stressfulLevel: "300l",
+      stateOrTribe: "IMO/ IGBO",
+      hobby: "chilling out with friends and pressing my phone",
+      relationshipStatus: "Single",
+      forumPaddy: "Gucho, Seember, Mary Ogbadoyi…",
+      forumCrush: "J*****",
+      bibleVerse: "Songs of Solomon 1:2",
+      favQuote:
+        "Life it self is a whole risk, no risk no reward! So take the risk and see the difference…",
+      favSlang: "Your mind gas dey!",
+      japaOrStay: "Japa",
+      skill: "Entrepreneur",
+      partingWords:
+        "Set your goals right, and also balance your life on campus 💯",
+      imageUrl:
+        "https://drive.google.com/thumbnail?id=1n8kl-XEQTwXXSWG89_7ziB0RmObLhhhp",
+    },
+    {
+      id: "63",
+      name: "Awolowo Mary Abidemi",
+      fullName: "Awolowo Mary Abidemi",
+      nickname: "Imolede",
+      dateOfBirth: "10/6",
+      department: "Crop production",
+      nfcsSociety: "Alter night, legion, charismatic",
+      bestLevel: "300l",
+      funMoment: "With my C13 beauries 🥰 and Advocate gatherings",
+      bio: "Lover of God, smart/intelligent, proudly a Yoruba girl,an extrovert, I love reading books, love anything that brings in money,am a fashion designer",
+      stressfulLevel: "500l",
+      stateOrTribe: "Oyo/Yoruba",
+      hobby: "Reading books, sleeping, watching movies,",
+      relationshipStatus: "In a relationship",
+      forumPaddy: "Chizzy, Esther, Mani, faith, Edwin",
+      forumCrush: "Nill",
+      bibleVerse: "Exo 14 Vs 13_14",
+      favQuote: "Tough time never last tough people do",
+      favSlang: "Hmmmmmm it is well",
+      japaOrStay: "Japa",
+      skill: "Fashion design, sells Oriflame product,eggs,books)",
+      partingWords:
+        "Nothing is impossible, God constant academic first, hustle oooo learn a skill either soft or hard skill",
+      imageUrl:
+        "https://drive.google.com/thumbnail?id=1J9a9wuoN2hTjQmYA_2vgsoW672CAk1uY",
+    },
+    {
+      id: "64",
+      name: "Esther Benjamin",
+      fullName: "Esther Benjamin",
+      nickname: "Fortune",
+      dateOfBirth: "4/27",
+      department: "ITE (building technology)",
+      nfcsSociety: "SHC/JTL",
+      bestLevel: "400l",
+      funMoment: "Forum meetings",
+      bio: " I'm a fashion designer (a hustler)I do alot of things ,love trying out new things I'm an introvert and a great listener too",
+      stressfulLevel: "200l",
+      stateOrTribe: "Imo/Igbo",
+      hobby: "Makes dress and Stay at home",
+      relationshipStatus: "In a relationship",
+      forumPaddy: "Osas",
+      forumCrush: "The space is too small ,😏",
+      bibleVerse: "Prov 3v5-6,1cor15v33",
+      favQuote:
+        "Always be yourself cherish every moment and be contempt with what you have",
+      favSlang: "I no fit shout ooh ,",
+      japaOrStay: "Japa",
+      skill: "Peanut making and fashion designer",
+      partingWords: "Hold God and he will never fail you I promise you",
+      imageUrl:
+        "https://drive.google.com/thumbnail?id=1ggV5X0DZnBCBs-X6gwkdtjBqkwUxuCu5",
+    },
+    {
+      id: "65",
+      name: "Maigida Vincent",
+      fullName: "Maigida Vincent",
+      nickname: "DEE EAGLE",
+      dateOfBirth: "6/24",
+      department: "Electrical and Electronics Engineering",
+      nfcsSociety: "Legion of Mary",
+      bestLevel: "300l",
+      funMoment: "None",
+      bio: "I love food.",
+      stressfulLevel: "100l",
+      stateOrTribe: "Niger/Gbagyi",
+      hobby: "Cooking and Eating",
+      relationshipStatus: "In a relationship",
+      forumPaddy: "Prince Luka Kuta",
+      forumCrush: "None",
+      bibleVerse: "Jeremiah 1:5",
+      favQuote: "Lead like an eagle, with vision and courage",
+      favSlang: "God dey",
+      japaOrStay: "Japa",
+      skill: "Computer/Electronics Engineer",
+      partingWords: "With God you will go far",
+      imageUrl:
+        "https://drive.google.com/thumbnail?id=1kjXzdoZb2NMgEF2GPnc_h65LFtpT92mg",
+    },
+    {
+      id: "66",
+      name: "Abutu Emmanuel Agaba",
+      fullName: "Abutu Emmanuel Agaba",
+      nickname: "Emmybreezy",
+      dateOfBirth: "12/13",
+      department: "Agricultural Extension and Rural Development",
+      nfcsSociety: "Altar knight, JTL, legion of Mary and Usher",
+      bestLevel: "400l",
+      funMoment: "Many",
+      bio: "I'm Cool, calm, friendly, dedicated, passionate about everything that has to do with fashion and love to make everyone around me happy",
+      stressfulLevel: "300l",
+      stateOrTribe: "Benue /Idoma",
+      hobby: "Sport , listening to music and traveling",
+      relationshipStatus: "Single",
+      forumPaddy: "Stephen, Michael,Kayla and Johnito",
+      forumCrush: "Nil",
+      bibleVerse: "Matthew 19:26",
+      favQuote: "That which does not kill me makes me stronger",
+      favSlang: "Omo na on God o",
+      japaOrStay: "Japa",
+      skill: "Fashion Designer and Entrepreneur",
+      partingWords: "E go choke oo but no just give up",
+      imageUrl:
+        "https://drive.google.com/thumbnail?id=1jW0ERzeXWP740nqge3WQuz_yZcAPuqAW",
+    },
+    {
+      id: "67",
+      name: "Dawa Cecilia Nathaniel",
+      fullName: "Dawa Cecilia Nathaniel",
+      nickname: "Arewagoddess",
+      dateOfBirth: "11/11",
+      department: "EDC",
+      nfcsSociety: "Nill",
+      bestLevel: "400l",
+      funMoment: "Nill",
+      bio: "I like to sleep.",
+      stressfulLevel: "500l",
+      stateOrTribe: "Kebbi",
+      hobby: "Traveling,sleeping and surfing the internet",
+      relationshipStatus: "In a relationship",
+      forumPaddy: "Victor",
+      forumCrush: "Nill",
+      bibleVerse: "Isaiah 60:22",
+      favQuote: "It is well.",
+      favSlang: "Omo!",
+      japaOrStay: "Japa",
+      skill: "Streaming",
+      partingWords:
+        "May the curiosity that lit our lecture halls stay bright in the world beyond.We may not know exactly what’s next, but we’ve learned how to begin, how to adapt, and how to keep going. And when the time is right the lord will make it happen.",
+      imageUrl:
+        "https://drive.google.com/thumbnail?id=1wYZ28gLmRNVZu0X5cy9tlIShtRTBULuV",
+    },
+    {
+      id: "68",
+      name: "Omale Basil",
+      fullName: "Omale Basil",
+      nickname: "Nil",
+      dateOfBirth: "11/10",
+      department: "Agricultural and Bio-Resource Engineering",
+      nfcsSociety: "CCRN",
+      bestLevel: "400l",
+      funMoment: "During the last NFCS dinner night",
+      bio: "Just a calm guy that love making others smile",
+      stressfulLevel: "200l",
+      stateOrTribe: "KOGI/IGALA",
+      hobby: "Observing things",
+      relationshipStatus: "In a relationship",
+      forumPaddy: "Joseph Egwonu",
+      forumCrush: "Chioma, Esther, Jojo etc",
+      bibleVerse: "Hab 2:3",
+      favQuote: "Everything na time",
+      favSlang: "Baba",
+      japaOrStay: "Stay",
+      skill: "Fashion Designer",
+      partingWords:
+        "Any thing you start now, and your are consistent with it, before you graduate you would be good at it.",
+      imageUrl:
+        "https://drive.google.com/thumbnail?id=1_nc0S8fvAsg2U9DxyuxBspPP3InYj6R5",
+    },
+    {
+      id: "69",
+      name: "Tindyer Becky",
+      fullName: "Tindyer Becky",
+      nickname: "Nil",
+      dateOfBirth: "12/16",
+      department: "Urban and Regional planning",
+      nfcsSociety: "None at the moment",
+      bestLevel: "500l",
+      funMoment: "Organized picnics and Hangouts",
+      bio: "I strongly believe in God and trust his divine presence in my life, I am hardworking and creative and I have a strong determination to succeed.",
+      stressfulLevel: "300l",
+      stateOrTribe: "Benue/Tiv",
+      hobby: "Poetry/painting",
+      relationshipStatus: "In a relationship",
+      forumPaddy: "Sister Veronica and sister Favour",
+      forumCrush: "None",
+      bibleVerse: "2 Timothy 1:7",
+      favQuote:
+        "E no get watin wan happen wey never happen before, Na God dey run tinz",
+      favSlang: "Try dey rest",
+      japaOrStay: "Japa",
+      skill: "Hair stylist",
+      partingWords: "Follow your dreams they know the way",
+      imageUrl:
+        "https://drive.google.com/thumbnail?id=1ieg9qB_lKTwllu2BtCk7VBIZOu0q4XZO",
+    },
+    {
+      id: "70",
+      name: "Victoria Onyowoicho Ameh",
+      fullName: "Victoria Onyowoicho Ameh",
+      nickname: "Tori",
+      dateOfBirth: "12/10",
+      department: "Statistics",
+      nfcsSociety: "Lectors, Choir",
+      bestLevel: "500l",
+      funMoment: "Everyday comes with its version of fun",
+      bio: "A student of Wisdom, Adventure and Knowledge",
+      stressfulLevel: "300l",
+      stateOrTribe: "Benue/Idoma",
+      hobby: "Trying New Recipes, Baking, Singing, Getting dolled up",
+      relationshipStatus: "Single",
+      forumPaddy: "MaryAnne",
+      forumCrush: "Nil",
+      bibleVerse: "Luke 1:45",
+      favQuote: "Have the Courage to live everyday right.",
+      favSlang: "God abeg",
+      japaOrStay: "Japa",
+      skill: "Baking",
+      partingWords: "Discover and get to know yourself as fast as possible",
+      imageUrl:
+        "https://drive.google.com/thumbnail?id=1HYnn2t-MDD0IWk5xOJozwNNySPGwpbfn",
+    },
+    {
+      id: "71",
+      name: "ODAN EMMANUEL ADAIKWU",
+      fullName: "ODAN EMMANUEL ADAIKWU",
+      nickname: "Dark phoenix",
+      dateOfBirth: "1/22",
+      department: "Civil Engineering",
+      nfcsSociety: "Divine Mercy",
+      bestLevel: "200l",
+      funMoment: "Every and any moment I'm around my mates",
+      bio: "I'm actually the shy type, although I tend to put up a look not to give it away, at the same time I love interacting, socialising especially the crazy type, if ya know what I mean.",
+      stressfulLevel: "300l",
+      stateOrTribe: "Benue state /Igede",
+      hobby: "Gaming, listening to music and dancing",
+      relationshipStatus: "Single",
+      forumPaddy: "Chizzy, Joyce, JoJo, Victor, Emmanuel",
+      forumCrush: "Chizzy",
+      bibleVerse: "2 Timothy 1:7",
+      favQuote:
+        "If ya dreams don't scare ya enough, then ya ain't even started dreaming",
+      favSlang: "Ooo Chim",
+      japaOrStay: "Japa",
+      skill: "Airdrop, Crypto",
+      partingWords: "If ya gonna quit, why not tomorrow",
+      imageUrl:
+        "https://drive.google.com/thumbnail?id=1_9g2QePxHZf-DuOJaLq2BlKmSPLwkQxP",
+    },
+    {
+      id: "72",
+      name: "Adinya Esther Onume",
+      fullName: "Adinya Esther Onume",
+      nickname: "Nill",
+      dateOfBirth: "4/19",
+      department: "Biochemistry",
+      nfcsSociety: "SHC",
+      bestLevel: "200l",
+      funMoment: "Every forum meetings",
+      bio: "I am... ME",
+      stressfulLevel: "500l",
+      stateOrTribe: "Idoma",
+      hobby: "Sleeping  and eating",
+      relationshipStatus: "In a relationship",
+      forumPaddy: "Ene,faustie,sommie,Micheal ,Gabriel's, and Emmanuel",
+      forumCrush: "Chibaby",
+      bibleVerse: "Psalm 150:6",
+      favQuote: "Never say neverrr",
+      favSlang: "Omo!",
+      japaOrStay: "Stay",
+      skill: "Entrepreneur😊",
+      partingWords:
+        "Thank you for the beautiful memories-hello to whats next😊",
+      imageUrl:
+        "https://drive.google.com/thumbnail?id=1z-ocKrvqiqXFkO_3UzGALKgtB6HZLPbv",
+    },
+    {
+      id: "73",
+      name: "Naze Seember Cecilia",
+      fullName: "Naze Seember Cecilia",
+      nickname: "$em/Sweet $em",
+      dateOfBirth: "12/17",
+      department: "Architecture",
+      nfcsSociety: "Board of Lectors",
+      bestLevel: "400l",
+      funMoment: "Competing for and winning miss NFCS.",
+      bio: "The exquisite Seember Cecilia Naze popularly known as $em is a quality woman. Versatile, sassy, graceful, eloquent and smart, $em stands out as the lord’s handmaid; the imago dei(image of God).",
+      stressfulLevel: "300l",
+      stateOrTribe: "Taraba state/Tiv",
+      hobby: "Reading fiction, playing dress up, visualizing, writing",
+      relationshipStatus: "Single",
+      forumPaddy: "Lilian",
+      forumCrush: "NIL",
+      bibleVerse: "2 Timothy 4 vs 17",
+      favQuote: "…that they may have life and have it to the full",
+      favSlang: "Omo mehn",
+      japaOrStay: "Japa",
+      skill: "Design, content writing, media and events.",
+      partingWords:
+        "Protect your peace, stay focused, embrace positivity, avoid the messy and miserable.",
+      imageUrl:
+        "https://drive.google.com/thumbnail?id=117ziims0BFnKXtnBR3YaV44s9KILve4T",
     },
   ];
 
   const awardCategories = [
-    "Most handsome (gk)",
-    "Most handsome (bosso)",
-    "Most beautiful (gk)",
-    "Most beautiful (bosso)",
-    "Most intellectual (gk)",
-    "Most intellectual (bosso)",
-    "Most social",
-    "Entrepreneur of the year (gk)",
-    "Entrepreneur of the year (bosso)",
-    "Best dressed male (gk)",
-    "Best dressed male (bosso)",
-    "Best dressed female (gk)",
-    "Best dressed female (bosso)",
-    "Most dedicated (gk)",
-    "Most dedicated (bosso)",
-    "Outstanding personality (gk)",
-    "Outstanding personality (bosso)",
-    "Cool, calm and collected (gk)",
-    "Cool, calm and collected (bosso)",
-    "Most influential",
-    "Best clique (gk)",
-    "Best clique (bosso)",
-    "Mr. Culture (gk)",
-    "Mr. Culture (bosso)",
-    "Miss culture (gk)",
-    "Miss. Culture (bosso)",
-    "Most political",
-    "Sports personality of the year (gk)",
-    "Sports personality of the year (bosso)",
-    "Mr. Ebony (gk)",
-    "Mr. Ebony (bosso)",
-    "Miss. Ebony (gk)",
-    "Miss. Ebony (bosso)",
-    "Music personality of the year",
-    "Couple of the year",
+    "Most Handsome (GK)",
+    "Most Handsome (Bosso)",
+    "Most Beautiful (GK)",
+    "Most Beautiful (Bosso)",
+    "Most Intellectual (GK)",
+    "Most Intellectual (Bosso)",
+    "Most Social",
+    "Entrepreneur of the Year (GK)",
+    "Entrepreneur of the Year (Bosso)",
+    "Best Dressed Male (GK)",
+    "Best Dressed Male (Bosso)",
+    "Best Dressed Female (GK)",
+    "Best Dressed Female (Bosso)",
+    "Most Dedicated (GK)",
+    "Most Dedicated (Bosso)",
+    "Outstanding Personality (GK)",
+    "Outstanding Personality (Bosso)",
+    "Cool, Calm & Collected (GK)",
+    "Cool, Calm & Collected (Bosso)",
+    "Most Influential",
+    "Best Clique (GK)",
+    "Best Clique (Bosso)",
+    "Mr. Culture (GK)",
+    "Mr. Culture (Bosso)",
+    "Miss Culture (GK)",
+    "Miss Culture (Bosso)",
+    "Most Political",
+    "Sports Personality of the Year (GK)",
+    "Sports Personality of the Year (Bosso)",
+    "Mr. Ebony (GK)",
+    "Mr. Ebony (Bosso)",
+    "Miss Ebony (GK)",
+    "Miss Ebony (Bosso)",
+    "Music Personality of the Year",
+    "Couple of the Year",
   ];
 
   // Handler functions
@@ -1819,13 +2410,15 @@ export default function page() {
               </button>
 
               {/* Profile Image */}
-              <div className="h-64 bg-gradient-to-r from-blue-500 to-purple-600 rounded-t-xl overflow-hidden">
+              <div className="h-64 bg-slate-800 rounded-t-xl overflow-hidden">
                 {viewingProfile.imageUrl ? (
-                  <img
-                    src={viewingProfile.imageUrl}
-                    alt={viewingProfile.name}
-                    className="w-full h-full object-cover"
-                  />
+                  <div className=" flex justify-center items-center h-full ">
+                    <img
+                      src={viewingProfile.imageUrl}
+                      alt={viewingProfile.name}
+                      className="h-64 w-64 rounded-full border-4 border-white "
+                    />
+                  </div>
                 ) : (
                   <div className="w-full h-full flex items-center justify-center bg-gray-200">
                     <svg
@@ -1864,7 +2457,14 @@ export default function page() {
 
                   <div>
                     <h4 className="text-xl font-semibold text-slate-700 mb-2">
-                      Favorite Bible Verse
+                      Hobby
+                    </h4>
+                    <p className="text-slate-600">{viewingProfile.hobby}</p>
+                  </div>
+
+                  <div>
+                    <h4 className="text-xl font-semibold text-slate-700 mb-2">
+                      Favorite Bible Verse (Ref.)
                     </h4>
                     <p className="text-slate-600 font-medium italic">
                       "{viewingProfile.bibleVerse}"
@@ -1876,6 +2476,22 @@ export default function page() {
                       Most Fun Moment
                     </h4>
                     <p className="text-slate-600">{viewingProfile.funMoment}</p>
+                  </div>
+
+                  <div>
+                    <h4 className="text-xl font-semibold text-slate-700 mb-2">
+                      Parting Words
+                    </h4>
+                    <p className="text-slate-600">
+                      {viewingProfile.partingWords}
+                    </p>
+                  </div>
+
+                  <div>
+                    <h4 className="text-xl font-semibold text-slate-700 mb-2">
+                      Skill/Hustle
+                    </h4>
+                    <p className="text-slate-600">{viewingProfile.skill}</p>
                   </div>
 
                   <div className="pt-4 border-t border-slate-200">
