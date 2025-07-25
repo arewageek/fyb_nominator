@@ -11,29 +11,13 @@ generator client {
 
 datasource db {
   provider = "sqlite"
-  url      = env("DATABASE_URL")
+  url      = "file:./dev.db"
 }
 
-model Candidate {
-  id          Int          @id @default(autoincrement())
-  name        String
-  nominations Nomination[]
-}
-
-model Nomination {
-  id Int @id @default(autoincrement())
-
-  candidate Candidate @relation(fields: [candidateId], references: [id])
-  category  Category  @relation(fields: [categoryId], references: [id])
-
-  candidateId Int
-  categoryId  Int
-}
-
-model Category {
-  id              Int    @id @default(autoincrement())
-  name            String @unique
-  candidatesCount Int
-
-  nomination Nomination[]
+model Nomination{
+  id        Int @id @default(autoincrement())
+  createdAt DateTime @default(now())
+  nominee   String
+  category  String
+  quantity  String
 }
